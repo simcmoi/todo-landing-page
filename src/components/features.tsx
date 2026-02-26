@@ -10,6 +10,7 @@ import {
   Keyboard
 } from "lucide-react"
 import { useTranslation } from "react-i18next"
+import { Badge } from "@/components/ui/badge"
 
 const container = {
   hidden: { opacity: 0 },
@@ -31,10 +32,17 @@ export function Features() {
   
   const featureIcons = [Zap, Keyboard, ListTree, Tag, CheckSquare, Bell, Moon, GripVertical]
   
+  // Badges pour certaines features: 0=Nouveau, 4=Populaire
+  const featureBadges: Record<number, { text: string; variant: "default" | "secondary" | "outline" }> = {
+    0: { text: "Populaire", variant: "default" },
+    4: { text: "Nouveau", variant: "secondary" },
+  }
+  
   const features = Array.from({ length: 8 }, (_, i) => ({
     icon: featureIcons[i],
     title: t(`features.list.${i}.title`),
     description: t(`features.list.${i}.description`),
+    badge: featureBadges[i],
   }))
   return (
     <section className="py-24 bg-gradient-to-b from-background via-[#97acc8]/5 to-background relative overflow-hidden">
@@ -75,15 +83,22 @@ export function Features() {
             ]
             const color = colors[index % 4]
             
-            return (
+              return (
               <motion.div
                 key={index}
                 variants={item}
                 className="relative group"
               >
                 <div className={`flex flex-col items-start space-y-3 p-6 rounded-lg border ${color.border} bg-card hover:shadow-lg ${color.hover} transition-all duration-300`}>
-                  <div className={`p-2 rounded-md ${color.bg}`}>
-                    <Icon className={`h-6 w-6 ${color.icon}`} />
+                  <div className="flex items-center justify-between w-full">
+                    <div className={`p-2 rounded-md ${color.bg}`}>
+                      <Icon className={`h-6 w-6 ${color.icon}`} />
+                    </div>
+                    {feature.badge && (
+                      <Badge variant={feature.badge.variant} className="bg-[#ffdd00] text-black border-[#ffdd00]/30">
+                        {feature.badge.text}
+                      </Badge>
+                    )}
                   </div>
                   <h3 className="font-semibold text-lg">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Download, Zap, CheckCircle2 } from 'lucide-react';
-import { getDownloadLink } from '@/config';
+import { getTrialLink } from '@/config';
 import { useTranslation } from 'react-i18next';
 
 export function HowItWorks() {
@@ -111,7 +111,7 @@ export function HowItWorks() {
             {t("howItWorks.ctaSubtext")}
           </p>
           <a 
-            href={getDownloadLink()} 
+            href={getTrialLink()} 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-8 py-4 bg-[#ffdd00] text-gray-900 rounded-lg font-semibold text-lg hover:bg-[#ffdd00]/90 transition-all hover:scale-105 shadow-lg shadow-[#ffdd00]/30 inline-block"

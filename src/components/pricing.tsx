@@ -1,6 +1,5 @@
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Check, X, Zap, Infinity, GraduationCap } from "lucide-react"
+import { motion } from "framer-motion"
+import { Check, X, Github, Sparkles, Users } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
@@ -11,6 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { useTranslation } from "react-i18next"
+import { config } from "@/config"
 
 interface PricingFeature {
   text: string
@@ -18,79 +19,10 @@ interface PricingFeature {
 }
 
 interface PricingPlan {
-  title: string
-  description: string
-  price?: number
-  priceLabel?: string
-  monthlyPrice?: number
-  annualPrice?: number
-  buttonText: string
-  popular?: boolean
-  lifetime?: boolean
+  id: 'solo' | 'pro' | 'openSource'
+  icon: typeof Users | typeof Sparkles | typeof Github
   features: PricingFeature[]
 }
-
-const pricingPlans: PricingPlan[] = [
-  {
-    title: "Gratuit",
-    description: "Ultra simple en local. Parfait pour commencer.",
-    monthlyPrice: 0,
-    annualPrice: 0,
-    buttonText: "Télécharger",
-    features: [
-      { text: "Stockage local JSON", included: true },
-      { text: "1 seule liste", included: true },
-      { text: "Tâches illimitées", included: true },
-      { text: "Sous-tâches simples", included: true },
-      { text: "Rappels simples", included: true },
-      { text: "Historique des tâches", included: true },
-      { text: "Aucune création de compte", included: true },
-      { text: "Synchronisation cloud", included: false },
-      { text: "Multi-listes", included: false },
-      { text: "Tâches récurrentes", included: false },
-    ],
-  },
-  {
-    title: "Pro",
-    description: "Puissant quand tu en as besoin. Pour les power users.",
-    monthlyPrice: 4,
-    annualPrice: 29,
-    buttonText: "Commencer l'essai",
-    popular: true,
-    features: [
-      { text: "Tout du plan Gratuit", included: true },
-      { text: "Synchronisation cloud", included: true },
-      { text: "Multi-device", included: true },
-      { text: "Multi-listes illimitées", included: true },
-      { text: "Tâches récurrentes", included: true },
-      { text: "Natural language input", included: true },
-      { text: "Vue Aujourd'hui avancée", included: true },
-      { text: "Snooze intelligent", included: true },
-      { text: "Statistiques & insights", included: true },
-      { text: "Support prioritaire", included: true },
-    ],
-  },
-  {
-    title: "Lifetime",
-    description: "Un seul paiement, utilisez l'app à vie.",
-    price: 29,
-    priceLabel: "paiement unique",
-    buttonText: "Acheter la licence",
-    lifetime: true,
-    features: [
-      { text: "Mode local illimité", included: true },
-      { text: "Multi-listes illimitées", included: true },
-      { text: "Tâches récurrentes", included: true },
-      { text: "Natural language input", included: true },
-      { text: "Toutes les fonctionnalités", included: true },
-      { text: "1 an de mises à jour incluses", included: true },
-      { text: "Mises à jour suivantes : 12€/an", included: true },
-      { text: "Tarif étudiant : mises à jour gratuites", included: true },
-      { text: "Synchronisation cloud", included: false },
-      { text: "Multi-device", included: false },
-    ],
-  },
-]
 
 const container = {
   hidden: { opacity: 0 },
@@ -108,9 +40,54 @@ const item = {
 }
 
 export function Pricing() {
-  const [isAnnual, setIsAnnual] = useState(false)
+  const { t } = useTranslation()
 
-  const savingsPercentage = Math.round(((4 * 12 - 29) / (4 * 12)) * 100)
+  const pricingPlans: PricingPlan[] = [
+    {
+      id: 'solo',
+      icon: Users,
+      features: [
+        { text: "1 appareil (Mac, Windows ou Linux)", included: true },
+        { text: "Toutes les fonctionnalités incluses", included: true },
+        { text: "Mises à jour à vie", included: true },
+        { text: "Mises à jour automatiques", included: true },
+        { text: "Application signée et notarisée", included: true },
+        { text: "Support par email", included: true },
+        { text: "Données 100% locales (aucun cloud)", included: true },
+        { text: "Open Source (GPL-3.0)", included: true },
+      ],
+    },
+    {
+      id: 'pro',
+      icon: Sparkles,
+      features: [
+        { text: "Jusqu'à 3 appareils", included: true },
+        { text: "Toutes les fonctionnalités incluses", included: true },
+        { text: "Mises à jour à vie", included: true },
+        { text: "Mises à jour automatiques", included: true },
+        { text: "Application signée et notarisée", included: true },
+        { text: "Support prioritaire", included: true },
+        { text: "Données 100% locales (aucun cloud)", included: true },
+        { text: "Open Source (GPL-3.0)", included: true },
+        { text: "Accès anticipé aux nouvelles fonctionnalités", included: true },
+      ],
+    },
+    {
+      id: 'openSource',
+      icon: Github,
+      features: [
+        { text: "Appareils illimités", included: true },
+        { text: "Toutes les fonctionnalités incluses", included: true },
+        { text: "Code source complet disponible", included: true },
+        { text: "Compilez-le vous-même", included: true },
+        { text: "Aucune restriction", included: true },
+        { text: "Contribuez au projet", included: true },
+        { text: "Support communautaire (GitHub Issues)", included: true },
+        { text: "Mises à jour manuelles", included: false },
+        { text: "Application signée automatiquement", included: false },
+      ],
+    },
+  ]
 
   return (
     <section id="pricing" className="py-24 bg-gradient-to-br from-[#ffdd00]/5 via-background to-[#97acc8]/10 relative overflow-hidden">
@@ -128,51 +105,12 @@ export function Pricing() {
           className="text-center space-y-4 mb-12"
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Choisissez votre plan
+            {t("pricing.title")}
           </h2>
           
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-            Gratuit pour toujours, Pro pour la sync cloud, ou Lifetime pour un paiement unique.
+            {t("pricing.subtitle")}
           </p>
-
-          {/* Toggle Monthly/Annual */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <span className={`text-sm font-medium transition-colors ${!isAnnual ? 'text-foreground' : 'text-muted-foreground'}`}>
-              Mensuel
-            </span>
-            
-            <button
-              onClick={() => setIsAnnual(!isAnnual)}
-              className="relative w-16 h-8 rounded-full bg-secondary transition-colors hover:bg-secondary/80 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-            >
-              <motion.div
-                layout
-                transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                className={`absolute top-1 ${isAnnual ? 'left-9' : 'left-1'} w-6 h-6 rounded-full bg-primary`}
-              />
-            </button>
-            
-            <div className="flex items-center gap-2">
-              <span className={`text-sm font-medium transition-colors ${isAnnual ? 'text-foreground' : 'text-muted-foreground'}`}>
-                Annuel
-              </span>
-              <AnimatePresence mode="wait">
-                {isAnnual && (
-                  <motion.div
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0, opacity: 0 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  >
-                    <Badge variant="secondary" className="text-primary">
-                      <Zap className="h-3 w-3 mr-1" />
-                      -{savingsPercentage}%
-                    </Badge>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          </div>
         </motion.div>
 
         {/* Pricing Cards */}
@@ -184,39 +122,36 @@ export function Pricing() {
           className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto"
         >
           {pricingPlans.map((plan) => {
-            let displayPrice = ""
-            let displayPeriod = ""
-            let monthlyEquivalent = null
-
-            if (plan.lifetime) {
-              displayPrice = `${plan.price}€`
-              displayPeriod = plan.priceLabel || ""
-            } else {
-              const price = isAnnual ? plan.annualPrice : plan.monthlyPrice
-              displayPrice = `${price}€`
-              displayPeriod = isAnnual ? "an" : "mois"
-              if (isAnnual && plan.annualPrice! > 0) {
-                monthlyEquivalent = (plan.annualPrice! / 12).toFixed(2)
-              }
+            const planData = t(`pricing.${plan.id}`, { returnObjects: true }) as {
+              name: string
+              description: string
+              price: string
+              priceLabel: string
+              cta: string
+              popular?: boolean
             }
+
+            const Icon = plan.icon
+            const isPopular = plan.id === 'pro'
+            const isOpenSource = plan.id === 'openSource'
 
             return (
               <motion.div 
-                key={plan.title} 
+                key={plan.id} 
                 variants={item}
                 whileHover={{ y: -4 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <Card
                   className={`relative h-full ${
-                    plan.popular
+                    isPopular
                       ? "border-[#97acc8] shadow-lg shadow-[#97acc8]/20 bg-gradient-to-br from-[#97acc8]/5 to-background"
-                      : plan.lifetime
+                      : isOpenSource
                       ? "border-[#ffdd00] shadow-lg shadow-[#ffdd00]/20 bg-gradient-to-br from-[#ffdd00]/5 to-background"
                       : "border-border shadow-sm bg-card"
                   }`}
                 >
-                  {plan.popular && (
+                  {isPopular && (
                     <div className="absolute -top-3 left-0 right-0 flex justify-center z-10">
                       <Badge className="bg-gradient-to-r from-[#97acc8] to-[#7a92ad] text-white px-3 py-1 shadow-lg shadow-[#97acc8]/30">
                         Le plus populaire
@@ -224,59 +159,58 @@ export function Pricing() {
                     </div>
                   )}
                   
-                  {plan.lifetime && (
+                  {isOpenSource && (
                     <div className="absolute -top-3 left-0 right-0 flex justify-center z-10">
                       <Badge variant="outline" className="bg-gradient-to-r from-[#ffdd00] to-[#f5cc00] text-yellow-900 border-[#ffdd00] px-3 py-1 shadow-lg shadow-[#ffdd00]/30">
-                        <Infinity className="h-3 w-3 mr-1" />
-                        Paiement unique
+                        <Github className="h-3 w-3 mr-1" />
+                        Open Source
                       </Badge>
                     </div>
                   )}
                   
                   <CardHeader>
-                    <CardTitle className="text-2xl">{plan.title}</CardTitle>
-                    <CardDescription className="text-base">{plan.description}</CardDescription>
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className={`p-2 rounded-lg ${
+                        isPopular ? 'bg-[#97acc8]/10' : isOpenSource ? 'bg-[#ffdd00]/10' : 'bg-muted'
+                      }`}>
+                        <Icon className={`h-6 w-6 ${
+                          isPopular ? 'text-[#97acc8]' : isOpenSource ? 'text-[#ffdd00]' : 'text-foreground'
+                        }`} />
+                      </div>
+                      <CardTitle className="text-2xl">{planData.name}</CardTitle>
+                    </div>
+                    <CardDescription className="text-base">{planData.description}</CardDescription>
                     
                     <div className="mt-4">
-                      <AnimatePresence mode="wait">
-                        <motion.div
-                          key={`${plan.title}-${isAnnual}`}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <div className="flex items-baseline gap-2">
-                            <span className="text-4xl font-bold">{displayPrice}</span>
-                            {displayPeriod && (
-                              <span className="text-muted-foreground">
-                                {plan.lifetime ? displayPeriod : `/ ${displayPeriod}`}
-                              </span>
-                            )}
-                          </div>
-                          {monthlyEquivalent && (
-                            <p className="text-sm text-muted-foreground mt-1">
-                              Soit {monthlyEquivalent}€/mois
-                            </p>
-                          )}
-                        </motion.div>
-                      </AnimatePresence>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-4xl font-bold">{planData.price}</span>
+                        <span className="text-muted-foreground text-sm">
+                          {planData.priceLabel}
+                        </span>
+                      </div>
                     </div>
                   </CardHeader>
 
                   <CardContent>
                     <Button 
                       className={`w-full ${
-                        plan.popular 
+                        isPopular 
                           ? 'bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] shadow-lg shadow-[#97acc8]/30' 
-                          : plan.lifetime
+                          : isOpenSource
                           ? 'bg-gradient-to-r from-[#ffdd00] to-[#f5cc00] hover:from-[#f5cc00] hover:to-[#ebc300] text-yellow-950 shadow-lg shadow-[#ffdd00]/30'
                           : ''
                       }`}
                       size="lg" 
-                      variant={plan.popular || plan.lifetime ? "default" : "outline"}
+                      variant={isPopular || isOpenSource ? "default" : "outline"}
+                      asChild
                     >
-                      {plan.buttonText}
+                      <a 
+                        href={isOpenSource ? config.social.github : config.downloads.purchase}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {planData.cta}
+                      </a>
                     </Button>
 
                     <div className="mt-6 space-y-3">
@@ -302,18 +236,15 @@ export function Pricing() {
                   </CardContent>
 
                   <CardFooter className="flex-col gap-2">
-                    {plan.popular && (
+                    {isPopular && (
                       <p className="text-xs text-muted-foreground text-center w-full">
-                        Essai gratuit de 14 jours • Sans engagement
+                        {t("pricing.trial")}
                       </p>
                     )}
-                    {plan.lifetime && (
-                      <div className="text-xs text-muted-foreground text-center w-full space-y-1">
-                        <p className="flex items-center justify-center gap-1">
-                          <GraduationCap className="h-3 w-3" />
-                          <span>Étudiants : mises à jour gratuites à vie</span>
-                        </p>
-                      </div>
+                    {plan.id === 'solo' && (
+                      <p className="text-xs text-muted-foreground text-center w-full">
+                        {t("pricing.trial")}
+                      </p>
                     )}
                   </CardFooter>
                 </Card>
@@ -322,7 +253,7 @@ export function Pricing() {
           })}
         </motion.div>
 
-        {/* Footer note */}
+        {/* Footer notes */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -331,10 +262,10 @@ export function Pricing() {
           className="mt-12 text-center space-y-2"
         >
           <p className="text-sm text-muted-foreground">
-            Plan Gratuit & Lifetime : données en local uniquement • Plan Pro : sync cloud sécurisé avec Supabase
+            ✓ {t("pricing.moneyBack")} • ✓ Toutes les plateformes (macOS, Windows, Linux) • ✓ Code source vérifiable
           </p>
           <p className="text-xs text-muted-foreground">
-            * Licence Lifetime : après 1 an, les mises à jour sont à 12€/an (gratuites pour les étudiants avec justificatif)
+            {t("pricing.faq")}
           </p>
         </motion.div>
       </div>

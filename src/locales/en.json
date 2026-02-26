@@ -9,9 +9,10 @@
   "hero": {
     "title": "The to-do list that appears in a flash",
     "subtitle": "Hit Shift+Space and your to-do appears instantly over all your windows. Add a task, check it off, and it's gone. As simple as that.",
-    "cta": "Download for {{os}}",
-    "ctaDefault": "Download Todo Overlay",
-    "ctaSubtext": "No account required • Free forever"
+    "cta": "Try free (14 days)",
+    "ctaSecondary": "Buy now",
+    "ctaSubtext": "Open Source • 100% Private • Zero Subscription",
+    "badge": "Open Source (GPL-3.0) • 100% Local Data"
   },
   "socialProof": {
     "badge": "10,000+ satisfied users",
@@ -25,23 +26,25 @@
   "problemSolution": {
     "title": "Stop wasting time with your tasks",
     "subtitle": "The difference between searching for your tool and having it instantly",
-    "without": "Without Todo Overlay",
-    "with": "With Todo Overlay",
+    "without": "Without BlinkDo",
+    "with": "With BlinkDo",
     "withoutProblems": [
       "Opening a dedicated app for every little task",
       "Losing track of your ideas while coding",
-      "Juggling between multiple tools to stay organized",
+      "Your data stored on unknown servers",
+      "Monthly subscriptions that add up",
       "Waiting several seconds to access your notes"
     ],
     "withSolutions": [
       "One keystroke to display everything instantly",
       "Capture your thoughts without leaving your editor",
-      "One tool, always within reach",
+      "Your data stays 100% on your machine",
+      "Pay once, use it forever",
       "Appears in less than 0.3 seconds"
     ],
-    "withoutResult": "Result: You lose focus and your productivity drops",
-    "withResult": "Result: You stay focused and accomplish 3x more in less time",
-    "cta": "Try it free now"
+    "withoutResult": "Result: You lose focus and your data is exposed",
+    "withResult": "Result: You stay focused, your ideas are protected",
+    "cta": "Try free (14 days)"
   },
   "features": {
     "title": "Designed to save you time",
@@ -87,8 +90,8 @@
     "steps": [
       {
         "number": "01",
-        "title": "Download in 30 seconds",
-        "description": "Install Todo Overlay on macOS, Windows or Linux. No account needed, no complex setup."
+        "title": "Try free for 14 days",
+        "description": "Install BlinkDo on macOS, Windows or Linux. No credit card required for the trial."
       },
       {
         "number": "02",
@@ -98,18 +101,18 @@
       },
       {
         "number": "03",
-        "title": "Manage your tasks in a flash",
-        "description": "Add, edit, check off. Then press Shift+Space again to return to your work."
+        "title": "Buy if you love it ($29 lifetime)",
+        "description": "One payment for a lifetime license. No subscription, no tricks. Or compile for free from GitHub."
       }
     ],
-    "cta": "Download Todo Overlay",
-    "ctaSubtext": "Ready to try? It's free and no commitment.",
+    "cta": "Try free (14 days)",
+    "ctaSubtext": "No credit card required • Source code available on GitHub",
     "platforms": "macOS • Windows • Linux"
   },
   "testimonials": {
     "badge": "10,000+ satisfied users",
     "title": "They transformed their productivity",
-    "subtitle": "Discover how Todo Overlay is changing the lives of thousands of people every day",
+    "subtitle": "Discover how BlinkDo is changing the lives of thousands of people every day",
     "list": [
       {
         "name": "Marie Dubois",
@@ -121,13 +124,13 @@
         "name": "Thomas Laurent",
         "role": "Full-Stack Developer",
         "company": "Tech Startup",
-        "content": "I've tried Notion, Todoist, Things... Nothing beats Todo Overlay's speed. In 3 seconds my task is created and I'm back in my code."
+        "content": "I've tried Notion, Todoist, Things... Nothing beats BlinkDo's speed. In 3 seconds my task is created and I'm back in my code."
       },
       {
         "name": "Sarah Martin",
         "role": "Project Manager",
         "company": "Digital Agency",
-        "content": "My teams love it. No more opening 10 apps to manage our tasks. Todo Overlay is always there, instantly accessible. Game changer."
+        "content": "My teams love it. No more opening 10 apps to manage our tasks. BlinkDo is always there, instantly accessible. Game changer."
       },
       {
         "name": "Lucas Petit",
@@ -157,46 +160,122 @@
         "name": "Maxime Fontaine",
         "role": "Entrepreneur",
         "company": "Startup",
-        "content": "Todo Overlay helps me juggle 5 different projects. Multi-lists and colored tags make everything so much clearer. A must-have."
+        "content": "BlinkDo helps me juggle 5 different projects. Multi-lists and colored tags make everything so much clearer. A must-have."
       }
     ]
   },
+  "pricing": {
+    "title": "Pay once. Use it forever.",
+    "subtitle": "No subscription, no tricks. Buy once, it's yours forever. Or compile the source code for free.",
+    "solo": {
+      "name": "Solo",
+      "description": "Perfect for personal use on a single device",
+      "price": "$29",
+      "priceLabel": "one-time payment",
+      "cta": "Buy Solo",
+      "popular": false,
+      "features": [
+        "1 device (Mac, Windows or Linux)",
+        "All features included",
+        "Lifetime updates",
+        "Automatic updates",
+        "Signed and notarized app",
+        "Email support",
+        "100% local data (no cloud)",
+        "Open Source (GPL-3.0)"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "For power users juggling multiple machines",
+      "price": "$49",
+      "priceLabel": "one-time payment",
+      "cta": "Buy Pro",
+      "popular": true,
+      "features": [
+        "Up to 3 devices",
+        "All features included",
+        "Lifetime updates",
+        "Automatic updates",
+        "Signed and notarized app",
+        "Priority support",
+        "100% local data (no cloud)",
+        "Open Source (GPL-3.0)",
+        "Early access to new features"
+      ]
+    },
+    "openSource": {
+      "name": "Open Source",
+      "description": "Compile BlinkDo yourself from GitHub source code",
+      "price": "Free",
+      "priceLabel": "GPL-3.0 license",
+      "cta": "View on GitHub",
+      "popular": false,
+      "features": [
+        "Unlimited devices",
+        "All features included",
+        "Complete source code available",
+        "Compile it yourself",
+        "No restrictions",
+        "Manual updates",
+        "Community support (GitHub Issues)",
+        "Contribute to the project"
+      ]
+    },
+    "trial": "14-day free trial available for all paid plans",
+    "moneyBack": "30-day money-back guarantee",
+    "faq": "Questions? Check the FAQ or contact us"
+  },
   "founderStory": {
-    "badge": "Why Todo Overlay exists",
+    "badge": "Why BlinkDo exists",
     "greeting": "Hey 👋",
     "story": [
       "I'm a developer, and like you, I was constantly juggling between my tasks. I opened Notion for one idea, Apple Notes for another, a .txt file for my urgent todos...",
       "One day, in the middle of an intense coding session, I lost 15 minutes finding where I had noted an important detail. That's when I realized: the problem isn't organization, it's access.",
       "\"What if my to-do list was always exactly one keyboard shortcut away from me?\"",
-      "I built Todo Overlay for myself first. No account to create, no complex sync, no distractions. Just Shift+Space and there's my list. Shift+Space again, it's gone.",
+      "I built BlinkDo for myself first. No account to create, no sync to some obscure cloud, no distractions. Just Shift+Space and there's my list. Shift+Space again, it's gone.",
       "Today, over 10,000 people use it daily. Developers, designers, students, entrepreneurs. All with the same need: capture their thoughts without losing focus.",
-      "Todo Overlay is free, ad-free, and will remain so forever. Because productivity should never be a luxury."
+      "BlinkDo is Open Source (GPL-3.0) to guarantee transparency and protect your ideas. The code is public, verifiable, and you can compile it yourself for free.",
+      "But compiling and maintaining an app isn't trivial. That's why I sell a \"turnkey\" version: signed, with automatic updates, and ready to use. A single $29 payment funds full-time development and saves you hours.",
+      "No subscription, no tricks. You pay once, it's yours forever. Or you compile for free. The choice is yours."
     ],
     "highlight": "\"What if my to-do list was always exactly one keyboard shortcut away from me?\"",
-    "author": "[Your Name]",
-    "role": "Creator of Todo Overlay",
-    "cta": "Download for free",
-    "ctaSubtext": "Join the community and try it yourself"
+    "author": "Simon Fessy",
+    "role": "Creator of BlinkDo",
+    "cta": "Try free (14 days)",
+    "ctaSubtext": "No credit card required • Source code on GitHub"
   },
   "faq": {
     "title": "Frequently asked questions",
-    "subtitle": "Everything you need to know about Todo Overlay",
+    "subtitle": "Everything you need to know about BlinkDo",
     "questions": [
       {
-        "q": "Is it really free?",
-        "a": "Yes, 100% free. No trial period, no hidden premium version, no ads. Todo Overlay is and will always remain free for everyone."
+        "q": "If it's Open Source, why do I have to pay?",
+        "a": "BlinkDo's source code is 100% free and available on GitHub under GPL-3.0 license. You can compile it yourself for free. But compiling, signing an app, and configuring automatic updates takes time and technical skills. The paid license ($29 lifetime) gives you a ready-to-use version: signed, notarized, with automatic updates. It's a huge time saver. And it funds full-time development of the app."
+      },
+      {
+        "q": "Is it really a one-time payment? No hidden subscription?",
+        "a": "Yes, really. $29 once, and it's yours forever. No subscription, no recurring fees, no tricks. All future updates are included for life. No \"version 2.0\" paywall, no premium features. Everything is included."
+      },
+      {
+        "q": "Is my data really 100% private?",
+        "a": "Absolutely. BlinkDo stores all your data locally on your machine, in a simple JSON file. Nothing is sent to the internet, no servers, no cloud. The code is Open Source, you can verify yourself. Your ideas stay with you."
       },
       {
         "q": "Do I need to create an account?",
-        "a": "No! That's one of the great advantages of Todo Overlay. Download, install, and you're set. Your data stays on your machine, no account required."
+        "a": "No! That's one of the great advantages of BlinkDo. Download, install, and you're set. Your data stays on your machine, no account required. You just enter your license key after purchase, and that's it."
       },
       {
-        "q": "Is my data synced between my devices?",
-        "a": "Currently, Todo Overlay works locally on each machine to ensure speed and privacy. Cloud sync is on our roadmap, but always as an option for those who want it."
+        "q": "Does the 14-day free trial require a credit card?",
+        "a": "No. You can download BlinkDo and try it for 14 full days without entering any credit card. At the end of the trial, you decide whether to buy or not. No pressure."
       },
       {
-        "q": "Which platforms does Todo Overlay run on?",
-        "a": "Todo Overlay is available on macOS (10.13+), Windows (10+) and Linux (Ubuntu, Fedora, Arch). The app is native on each platform for optimal performance."
+        "q": "Which platforms does BlinkDo run on?",
+        "a": "BlinkDo is available on macOS (10.13+), Windows (10+) and Linux (Ubuntu, Fedora, Arch). The app is native on each platform for optimal performance. One license works on all platforms."
+      },
+      {
+        "q": "Can I use my license on multiple devices?",
+        "a": "The Solo license ($29) works on 1 device. The Pro license ($49) works on up to 3 devices. If you compile yourself from GitHub, there are no limitations."
       },
       {
         "q": "Can I customize the keyboard shortcut?",
@@ -204,23 +283,27 @@
       },
       {
         "q": "Does it slow down my computer?",
-        "a": "Not at all. Todo Overlay uses less than 50MB of RAM in the background and has no impact on your system performance. It's optimized to be invisible until you need it."
+        "a": "Not at all. BlinkDo uses less than 50MB of RAM in the background and has no impact on your system performance. It's optimized to be invisible until you need it."
       },
       {
         "q": "Can I organize my tasks by project or category?",
-        "a": "Yes! Todo Overlay supports tags, projects, and filters to organize your tasks as you wish. All while keeping the interface simple and fast."
+        "a": "Yes! BlinkDo supports multi-lists, tags, and filters to organize your tasks as you wish. All while keeping the interface simple and fast."
       },
       {
         "q": "What happens if I accidentally close the app?",
-        "a": "Nothing serious! All your tasks are automatically saved in real time. Even if you restart your computer, everything will be there on next launch."
+        "a": "Nothing serious! All your tasks are automatically saved in real time to a local file. Even if you restart your computer, everything will be there on next launch."
+      },
+      {
+        "q": "Is there a refund policy?",
+        "a": "Yes, 30-day money-back guarantee, no questions asked. If BlinkDo doesn't work for you, send us an email and we'll refund you in full."
+      },
+      {
+        "q": "How can I contribute to the source code?",
+        "a": "BlinkDo is Open Source under GPL-3.0. The code is on GitHub, contributions (pull requests, issues, suggestions) are welcome! You can also join our Discord to chat with the community."
       },
       {
         "q": "Is there a mobile app?",
-        "a": "Not yet, but it's in our plans! For now, Todo Overlay focuses on the desktop experience where keyboard shortcut access speed makes all the difference."
-      },
-      {
-        "q": "How can I contribute or give feedback?",
-        "a": "We love user feedback! Join our Discord, send us an email, or open an issue on GitHub. All suggestions are welcome."
+        "a": "Not yet, but it's in our plans! For now, BlinkDo focuses on the desktop experience where keyboard shortcut access speed makes all the difference."
       }
     ],
     "stillQuestions": "Still have questions?",
@@ -229,19 +312,19 @@
     "email": "Send an email"
   },
   "footer": {
-    "ctaBadge": "Free · No account · Available now",
+    "ctaBadge": "Open Source · 100% Private · Available Now",
     "ctaTitle": "Ready to transform your productivity?",
-    "ctaSubtitle": "Join the 10,000+ people who manage their tasks in a flash with Todo Overlay",
-    "downloadButton": "Download for free",
-    "githubButton": "View on GitHub",
+    "ctaSubtitle": "Join the 10,000+ people who manage their tasks in a flash with BlinkDo",
+    "downloadButton": "Try free (14 days)",
+    "githubButton": "View source code",
     "platforms": "macOS 10.13+ · Windows 10+ · Linux (Ubuntu, Fedora, Arch)",
-    "description": "The most efficient to-do app for macOS, Windows and Linux.",
+    "description": "The fastest to-do app for macOS, Windows and Linux. Open Source and 100% private.",
     "links": "Links",
     "download": "Download",
     "features": "Features",
     "info": "Information",
-    "version": "Version 0.2.0",
-    "license": "MIT License",
+    "version": "Version 0.2.7",
+    "license": "GPL-3.0 License",
     "copyright": "© 2026 Simon Fessy",
     "madeWith": "Made with",
     "by": "by Simon Fessy"

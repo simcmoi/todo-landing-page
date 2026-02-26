@@ -1,10 +1,12 @@
 import { Github, Heart, Zap } from "lucide-react"
 import { motion } from "framer-motion"
-import { config, getDownloadLink } from "@/config"
+import { config, getTrialLink } from "@/config"
 import { useTranslation } from "react-i18next"
+import { useGitHubReleases } from "@/hooks/use-github-releases"
 
 export function Footer() {
   const { t } = useTranslation();
+  const { release } = useGitHubReleases();
 
   return (
     <footer className="bg-background">
@@ -34,7 +36,7 @@ export function Footer() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
-                href={getDownloadLink()} 
+                href={getTrialLink()} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-[#ffdd00] text-gray-900 rounded-lg font-semibold text-lg hover:bg-[#ffdd00]/90 transition-all hover:scale-105 shadow-lg shadow-[#ffdd00]/30"
@@ -64,7 +66,7 @@ export function Footer() {
         <div className="container px-4 md:px-6 py-12">
           <div className="grid gap-8 md:grid-cols-3">
             <div className="space-y-3">
-              <h3 className="font-semibold">Todo Overlay</h3>
+              <h3 className="font-semibold">BlinkDo</h3>
               <p className="text-sm text-muted-foreground">
                 {t('footer.description')}
               </p>
@@ -75,7 +77,7 @@ export function Footer() {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a 
-                    href="https://github.com/simonfessy/todo-overlay" 
+                    href={config.social.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2"
@@ -106,7 +108,9 @@ export function Footer() {
             <div className="space-y-3">
               <h3 className="font-semibold">{t('footer.info')}</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>{t('footer.version')}</li>
+                <li>
+                  {release ? `Version ${release.version}` : t('footer.version')}
+                </li>
                 <li>{t('footer.license')}</li>
                 <li>{t('footer.copyright')}</li>
               </ul>

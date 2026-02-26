@@ -12,6 +12,7 @@ import { Pricing } from './components/pricing'
 import { FounderStory } from './components/founder-story'
 import { FAQ } from './components/faq'
 import { Footer } from './components/footer'
+import { Separator } from './components/ui/separator'
 
 function App() {
   const { i18n } = useTranslation()
@@ -28,12 +29,16 @@ function App() {
       <Header />
       <Hero />
       <Screenshots />
+      <Separator className="my-16 max-w-3xl mx-auto" />
       <SocialProof />
       <ProblemSolution />
+      <Separator className="my-16 max-w-3xl mx-auto" />
       <Features />
       <HowItWorks />
+      <Separator className="my-16 max-w-3xl mx-auto" />
       <Testimonials />
       <Pricing />
+      <Separator className="my-16 max-w-3xl mx-auto" />
       <FounderStory />
       <FAQ />
       <Footer />

@@ -1,31 +1,31 @@
 // Configuration centralisée des liens et URLs
 export const config = {
-  // Liens de téléchargement
+  // Liens de téléchargement (Version compilée payante)
   downloads: {
-    // Remplacer par les vrais liens GitHub releases
-    mac: 'https://github.com/simonfessy/todo-overlay/releases/latest/download/TodoOverlay-mac.dmg',
-    windows: 'https://github.com/simonfessy/todo-overlay/releases/latest/download/TodoOverlay-windows.exe',
-    linux: 'https://github.com/simonfessy/todo-overlay/releases/latest/download/TodoOverlay-linux.AppImage',
-    // Lien générique qui redirige vers la page releases
-    default: 'https://github.com/simonfessy/todo-overlay/releases/latest'
+    // Liens vers la plateforme de paiement (Gumroad/Lemon Squeezy)
+    purchase: 'https://blinkdo.lemonsqueezy.com', // À configurer
+    trial: 'https://github.com/simcmoi/blinkdo/releases/latest', // Essai gratuit 14 jours
+    // Lien vers le code source pour compilation manuelle
+    buildYourself: 'https://github.com/simcmoi/blinkdo#build-from-source'
   },
   
   // Liens sociaux et communauté
   social: {
-    github: 'https://github.com/simonfessy/todo-overlay',
-    discord: 'https://discord.gg/todo-overlay', // À remplacer par le vrai lien Discord
+    github: 'https://github.com/simcmoi/blinkdo',
+    discord: 'https://discord.gg/blinkdo', // À configurer
     twitter: 'https://twitter.com/simonfessy',
-    email: 'mailto:contact@todooverlay.app' // À remplacer par le vrai email
+    email: 'mailto:hello@blinkdo.app'
   },
 
   // Informations du produit
   app: {
-    name: 'Todo Overlay',
-    version: '0.2.0',
-    description: 'La to-do list qui apparaît en un éclair. Shift+Space et gérez vos tâches instantanément.',
+    name: 'BlinkDo',
+    version: '0.2.7',
+    description: 'La to-do list ultra-rapide qui s\'affiche en un éclair. Open Source, 100% privé, zéro abonnement.',
     tagline: 'La to-do list qui apparaît en un éclair',
-    url: 'https://todooverlay.app', // À remplacer par le vrai domaine
+    url: 'https://blinkdo.app',
     author: 'Simon Fessy',
+    license: 'GPL-3.0',
     keywords: [
       'todo',
       'productivity',
@@ -36,50 +36,61 @@ export const config = {
       'Windows',
       'Linux',
       'open source',
-      'gratuit'
+      'privacy-first',
+      'local-first'
     ]
+  },
+
+  // Tarification (Paiement unique)
+  pricing: {
+    solo: {
+      price: 29,
+      devices: 1,
+      currency: '€'
+    },
+    pro: {
+      price: 49,
+      devices: 3,
+      currency: '€'
+    },
+    openSource: {
+      price: 0,
+      devices: 'unlimited',
+      buildYourself: true
+    }
   },
 
   // Support et documentation
   support: {
-    docs: 'https://github.com/simonfessy/todo-overlay#readme',
-    issues: 'https://github.com/simonfessy/todo-overlay/issues',
-    changelog: 'https://github.com/simonfessy/todo-overlay/releases'
+    docs: 'https://github.com/simcmoi/blinkdo#readme',
+    issues: 'https://github.com/simcmoi/blinkdo/issues',
+    changelog: 'https://github.com/simcmoi/blinkdo/releases'
   }
 };
 
 // Fonction utilitaire pour détecter l'OS de l'utilisateur
-export function detectOS(): 'mac' | 'windows' | 'linux' | 'unknown' {
+export function detectOS(): 'macOS' | 'Windows' | 'Linux' | 'unknown' {
   const userAgent = window.navigator.userAgent.toLowerCase();
   
-  if (userAgent.includes('mac')) return 'mac';
-  if (userAgent.includes('win')) return 'windows';
-  if (userAgent.includes('linux')) return 'linux';
+  if (userAgent.includes('mac')) return 'macOS';
+  if (userAgent.includes('win')) return 'Windows';
+  if (userAgent.includes('linux')) return 'Linux';
   
   return 'unknown';
 }
 
-// Fonction pour obtenir le bon lien de téléchargement selon l'OS
-export function getDownloadLink(): string {
-  const os = detectOS();
-  
-  if (os === 'unknown') {
-    return config.downloads.default;
-  }
-  
-  return config.downloads[os];
+// Fonction pour obtenir le lien d'essai gratuit (14 jours)
+export function getTrialLink(): string {
+  return config.downloads.trial;
 }
 
-// Fonction pour obtenir le nom du bouton de téléchargement selon l'OS
-export function getDownloadButtonText(): string {
+// Fonction pour obtenir le lien d'achat de licence
+export function getPurchaseLink(): string {
+  return config.downloads.purchase;
+}
+
+// Fonction pour obtenir le nom de l'OS formaté
+export function getOSName(): string {
   const os = detectOS();
-  
-  const osNames = {
-    mac: 'Télécharger pour macOS',
-    windows: 'Télécharger pour Windows',
-    linux: 'Télécharger pour Linux',
-    unknown: 'Télécharger Todo Overlay'
-  };
-  
-  return osNames[os];
+  return os === 'unknown' ? '' : os;
 }

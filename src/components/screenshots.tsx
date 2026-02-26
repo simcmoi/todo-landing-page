@@ -1,5 +1,11 @@
 import { motion } from "framer-motion"
-import { ArrowRight, Zap, Search, Tag } from "lucide-react"
+import { ArrowRight, Zap, Search, Tag, Keyboard } from "lucide-react"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export function Screenshots() {
   return (
@@ -65,7 +71,19 @@ export function Screenshots() {
                 <Zap className="w-6 h-6 text-[#97acc8]" />
               </div>
               <div className="flex-1">
-                <h3 className="font-bold text-lg mb-2">Shift+Space et hop</h3>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <h3 className="font-bold text-lg mb-2 cursor-help inline-flex items-center gap-2">
+                        Shift+Space et hop
+                        <Keyboard className="w-4 h-4 text-muted-foreground" />
+                      </h3>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Appuyez sur Shift+Espace n'importe où pour ouvrir l'overlay</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
                 <p className="text-muted-foreground text-sm">
                   L'overlay apparaît instantanément par-dessus toutes vos fenêtres. Pas besoin de changer d'app.
                 </p>

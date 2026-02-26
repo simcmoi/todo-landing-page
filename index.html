@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
-    <title>Todo Overlay - La to-do list qui apparaît en un éclair</title>
-    <meta name="title" content="Todo Overlay - La to-do list qui apparaît en un éclair" />
-    <meta name="description" content="Shift+Space et gérez vos tâches instantanément. L'application de to-do gratuite, rapide et sans compte qui s'affiche par-dessus toutes vos fenêtres. Disponible sur macOS, Windows et Linux." />
-    <meta name="keywords" content="todo, to-do list, productivité, overlay, shift space, raccourci clavier, gestionnaire de tâches, macOS, Windows, Linux, gratuit, open source" />
+    <title>BlinkDo - La to-do list qui apparaît en un éclair</title>
+    <meta name="title" content="BlinkDo - La to-do list qui apparaît en un éclair" />
+    <meta name="description" content="Shift+Space et gérez vos tâches instantanément. Open Source (GPL-3.0), 100% privé, sans abonnement. Essai gratuit 14 jours. macOS, Windows et Linux." />
+    <meta name="keywords" content="todo, to-do list, productivité, overlay, shift space, raccourci clavier, gestionnaire de tâches, macOS, Windows, Linux, open source, GPL, privacy, local-first, no subscription" />
     <meta name="author" content="Simon Fessy" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://todooverlay.app/" />
-    <meta property="og:title" content="Todo Overlay - La to-do list qui apparaît en un éclair" />
-    <meta property="og:description" content="Shift+Space et gérez vos tâches instantanément. Gratuit, rapide et sans compte. Disponible sur macOS, Windows et Linux." />
-    <meta property="og:image" content="https://todooverlay.app/og-image.png" />
+    <meta property="og:url" content="https://blinkdo.app/" />
+    <meta property="og:title" content="BlinkDo - Open Source To-Do List | Payez une fois, utilisez à vie" />
+    <meta property="og:description" content="Shift+Space et gérez vos tâches instantanément. Open Source (GPL-3.0), 100% privé, données locales. Essai gratuit 14 jours, puis 29€ à vie. Ou compilez gratuitement." />
+    <meta property="og:image" content="https://blinkdo.app/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content="Todo Overlay" />
+    <meta property="og:site_name" content="BlinkDo" />
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://todooverlay.app/" />
-    <meta property="twitter:title" content="Todo Overlay - La to-do list qui apparaît en un éclair" />
-    <meta property="twitter:description" content="Shift+Space et gérez vos tâches instantanément. Gratuit, rapide et sans compte." />
-    <meta property="twitter:image" content="https://todooverlay.app/twitter-image.png" />
+    <meta property="twitter:url" content="https://blinkdo.app/" />
+    <meta property="twitter:title" content="BlinkDo - Open Source To-Do | Payez une fois, utilisez à vie" />
+    <meta property="twitter:description" content="Shift+Space pour gérer vos tâches instantanément. Open Source, 100% privé, zéro abonnement. Essai gratuit 14 jours." />
+    <meta property="twitter:image" content="https://blinkdo.app/twitter-image.png" />
     <meta property="twitter:creator" content="@simonfessy" />
     
     <!-- Favicon -->
@@ -41,7 +41,7 @@
     <meta name="msapplication-TileColor" content="#ffdd00" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://todooverlay.app/" />
+    <link rel="canonical" href="https://blinkdo.app/" />
     
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
@@ -52,16 +52,39 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Todo Overlay",
-      "description": "La to-do list qui apparaît en un éclair. Shift+Space et gérez vos tâches instantanément.",
-      "url": "https://todooverlay.app",
+      "name": "BlinkDo",
+      "description": "La to-do list qui apparaît en un éclair. Open Source (GPL-3.0), 100% privé, données locales. Shift+Space et gérez vos tâches instantanément.",
+      "url": "https://blinkdo.app",
       "applicationCategory": "ProductivityApplication",
-      "operatingSystem": "macOS, Windows, Linux",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
-      },
+      "operatingSystem": "macOS 10.13+, Windows 10+, Linux",
+      "softwareVersion": "0.2.7",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Solo License",
+          "price": "29",
+          "priceCurrency": "EUR",
+          "description": "Licence à vie pour 1 appareil",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro License",
+          "price": "49",
+          "priceCurrency": "EUR",
+          "description": "Licence à vie pour 3 appareils",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "name": "Open Source",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Compilez gratuitement depuis GitHub",
+          "availability": "https://schema.org/InStock"
+        }
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5",
@@ -71,21 +94,26 @@
       },
       "author": {
         "@type": "Person",
-        "name": "Simon Fessy"
+        "name": "Simon Fessy",
+        "url": "https://github.com/simcmoi"
       },
       "datePublished": "2026-02-26",
-      "softwareVersion": "0.2.0",
-      "screenshot": "https://todooverlay.app/screenshot.png",
-      "downloadUrl": "https://github.com/simonfessy/todo-overlay/releases/latest",
+      "screenshot": "https://blinkdo.app/screenshot.png",
+      "downloadUrl": "https://github.com/simcmoi/blinkdo/releases/latest",
+      "codeRepository": "https://github.com/simcmoi/blinkdo",
       "featureList": [
         "Affichage instantané avec Shift+Space",
         "Overlay par-dessus toutes les fenêtres",
-        "Multi-listes et sous-tâches",
-        "Labels et organisation",
-        "Rappels intelligents",
+        "Multi-listes et sous-tâches illimitées",
+        "Labels et organisation avancée",
+        "Rappels natifs intelligents",
         "Mode sombre/clair automatique",
-        "Gratuit et sans compte",
-        "Données stockées localement"
+        "Données 100% locales (aucun cloud)",
+        "Open Source GPL-3.0",
+        "Aucun compte requis",
+        "Glisser-déposer pour réorganiser",
+        "Recherche instantanée",
+        "Export et import JSON"
       ]
     }
     </script>

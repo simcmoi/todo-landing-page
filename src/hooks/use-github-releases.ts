@@ -30,7 +30,7 @@ interface ReleaseData {
   }
 }
 
-const GITHUB_REPO = 'simcmoi/todo-overlay'
+const GITHUB_REPO = 'simcmoi/blinkdo'
 const GITHUB_API = `https://api.github.com/repos/${GITHUB_REPO}/releases/latest`
 
 export function useGitHubReleases() {
