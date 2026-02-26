@@ -7,8 +7,8 @@
     "download": "Télécharger"
   },
   "hero": {
-    "title": "La to-do list qui apparaît en un éclair",
-    "subtitle": "Shift+Space et votre to-do s'affiche instantanément par-dessus toutes vos fenêtres. Ajoutez une tâche, cochez, et hop, elle disparaît. Aussi simple que ça.",
+    "title": "La to-do list qui apparaît en un clin d'œil",
+    "subtitle": "Shift+Space et votre to-do s'affiche par-dessus toutes vos fenêtres. Ajoutez une tâche, cochez, et hop, elle disparaît. Aussi simple que ça.",
     "cta": "Essayer gratuitement (14 jours)",
     "ctaSecondary": "Acheter maintenant",
     "ctaSubtext": "Open Source • 100% privé • Zéro abonnement",
@@ -20,12 +20,12 @@
     "usersCount": "10 000+",
     "tasks": "Tâches gérées par jour",
     "tasksCount": "50 000+",
-    "speed": "Temps d'affichage",
-    "speedCount": "<0.3s"
+    "speed": "Temps de réponse",
+    "speedCount": "1 clin d'œil"
   },
   "problemSolution": {
     "title": "Arrêtez de perdre du temps avec vos tâches",
-    "subtitle": "La différence entre chercher son outil et l'avoir instantanément",
+    "subtitle": "La différence entre chercher son outil et l'avoir sous la main",
     "without": "Sans BlinkDo",
     "with": "Avec BlinkDo",
     "withoutProblems": [
@@ -36,11 +36,11 @@
       "Attendre plusieurs secondes pour accéder à vos notes"
     ],
     "withSolutions": [
-      "Une seule touche pour tout afficher instantanément",
+      "Une seule touche pour tout afficher en un clin d'œil",
       "Capturez vos pensées sans quitter votre éditeur",
       "Vos données restent 100% sur votre machine",
       "Un seul paiement, utilisez-le à vie",
-      "Apparition en moins de 0.3 secondes"
+      "Apparaît le temps d'un clin d'œil"
     ],
     "withoutResult": "Résultat : Vous perdez votre concentration et vos données sont exposées",
     "withResult": "Résultat : Vous restez concentré, vos idées sont protégées",
@@ -55,7 +55,7 @@
         "description": "Capturez vos idées en plein code sans perdre votre concentration. Shift+Space et c'est fait."
       },
       {
-        "title": "3x plus rapide qu'une app classique",
+        "title": "Le temps d'un clin d'œil, vos tâches sont là",
         "description": "Pendant que d'autres ouvrent leur application, vous avez déjà créé votre tâche et êtes retourné au travail."
       },
       {
@@ -64,7 +64,7 @@
       },
       {
         "title": "Retrouvez n'importe quelle tâche en 2 secondes",
-        "description": "Labels, filtres, recherche instantanée. Même avec 500 tâches, vous trouvez la bonne immédiatement."
+        "description": "Labels, filtres, recherche immédiate. Même avec 500 tâches, vous trouvez la bonne en un clin d'œil."
       },
       {
         "title": "Les gros projets ne font plus peur",
@@ -96,7 +96,7 @@
       {
         "number": "02",
         "title": "Appuyez sur Shift+Space",
-        "description": "Depuis n'importe quelle application, n'importe où sur votre ordinateur. Votre liste apparaît instantanément.",
+        "description": "Depuis n'importe quelle application, n'importe où sur votre ordinateur. Votre liste apparaît immédiatement.",
         "badge": "Le raccourci magique"
       },
       {
@@ -124,19 +124,19 @@
         "name": "Thomas Laurent",
         "role": "Développeur Full-Stack",
         "company": "Tech Startup",
-        "content": "J'ai essayé Notion, Todoist, Things... Rien ne bat la vitesse de BlinkDo. En 3 secondes ma tâche est créée et je suis déjà retourné dans mon code."
+        "content": "J'ai essayé Notion, Todoist, Things... Rien ne bat la réactivité de BlinkDo. En 3 secondes ma tâche est créée et je suis déjà retourné dans mon code."
       },
       {
         "name": "Sarah Martin",
         "role": "Chef de Projet",
         "company": "Agence Digitale",
-        "content": "Mes équipes adorent. Plus besoin d'ouvrir 10 apps pour gérer nos tâches. BlinkDo est toujours là, accessible instantanément. Game changer."
+        "content": "Mes équipes adorent. Plus besoin d'ouvrir 10 apps pour gérer nos tâches. BlinkDo est toujours là, accessible en un clin d'œil. Game changer."
       },
       {
         "name": "Lucas Petit",
         "role": "Étudiant en Informatique",
         "company": "École 42",
-        "content": "Gratuit, sans compte, ultra rapide... C'est exactement ce dont j'avais besoin pour mes projets perso et mes cours. Je recommande à tous mes potes !"
+        "content": "Gratuit, sans compte, réactif... C'est exactement ce dont j'avais besoin pour mes projets perso et mes cours. Je recommande à tous mes potes !"
       },
       {
         "name": "Emma Rousseau",
@@ -314,11 +314,11 @@
   "footer": {
     "ctaBadge": "Open Source · 100% privé · Disponible maintenant",
     "ctaTitle": "Prêt à transformer votre productivité ?",
-    "ctaSubtitle": "Rejoignez les 10 000+ personnes qui gèrent leurs tâches en un éclair avec BlinkDo",
+    "ctaSubtitle": "Rejoignez les 10 000+ personnes qui gèrent leurs tâches en un clin d'œil avec BlinkDo",
     "downloadButton": "Essayer gratuitement (14 jours)",
     "githubButton": "Voir le code source",
     "platforms": "macOS 10.13+ · Windows 10+ · Linux (Ubuntu, Fedora, Arch)",
-    "description": "L'application de to-do la plus rapide pour macOS, Windows et Linux. Open Source et 100% privée.",
+    "description": "L'application de to-do la plus réactive pour macOS, Windows et Linux. Open Source et 100% privée.",
     "links": "Liens",
     "download": "Télécharger",
     "features": "Fonctionnalités",

@@ -7,8 +7,8 @@
     "download": "Descargar"
   },
   "hero": {
-    "title": "La lista de tareas que aparece en un instante",
-    "subtitle": "Presiona Shift+Space y tu lista de tareas aparece instantáneamente sobre todas tus ventanas. Agrega una tarea, márcala y desaparece. Así de simple.",
+    "title": "La lista de tareas que aparece en un pestañeo",
+    "subtitle": "Presiona Shift+Space y tu lista de tareas aparece sobre todas tus ventanas. Agrega una tarea, márcala y desaparece. Así de simple.",
     "cta": "Prueba gratis (14 días)",
     "ctaSecondary": "Comprar ahora",
     "ctaSubtext": "Open Source • 100% Privado • Cero Suscripción",
@@ -20,12 +20,12 @@
     "usersCount": "10,000+",
     "tasks": "Tareas gestionadas por día",
     "tasksCount": "50,000+",
-    "speed": "Tiempo de aparición",
-    "speedCount": "<0.3s"
+    "speed": "Tiempo de respuesta",
+    "speedCount": "1 pestañeo"
   },
   "problemSolution": {
     "title": "Deja de perder tiempo con tus tareas",
-    "subtitle": "La diferencia entre buscar tu herramienta y tenerla al instante",
+    "subtitle": "La diferencia entre buscar tu herramienta y tenerla al alcance",
     "without": "Sin BlinkDo",
     "with": "Con BlinkDo",
     "withoutProblems": [
@@ -36,11 +36,11 @@
       "Esperar varios segundos para acceder a tus notas"
     ],
     "withSolutions": [
-      "Una sola tecla para mostrarlo todo instantáneamente",
+      "Una sola tecla para mostrarlo todo en un pestañeo",
       "Captura tus pensamientos sin salir de tu editor",
       "Tus datos permanecen 100% en tu máquina",
       "Paga una vez, úsalo para siempre",
-      "Aparece en menos de 0.3 segundos"
+      "Aparece en un abrir y cerrar de ojos"
     ],
     "withoutResult": "Resultado: Pierdes el enfoque y tus datos están expuestos",
     "withResult": "Resultado: Te mantienes concentrado, tus ideas están protegidas",
@@ -55,7 +55,7 @@
         "description": "Captura tus ideas en pleno código sin perder la concentración. Shift+Space y listo."
       },
       {
-        "title": "3x más rápido que una app normal",
+        "title": "En un pestañeo, tus tareas están ahí",
         "description": "Mientras otros abren su app, tú ya creaste tu tarea y volviste al trabajo."
       },
       {
@@ -64,7 +64,7 @@
       },
       {
         "title": "Encuentra cualquier tarea en 2 segundos",
-        "description": "Etiquetas, filtros, búsqueda instantánea. Incluso con 500 tareas, encuentras la correcta de inmediato."
+        "description": "Etiquetas, filtros, búsqueda inmediata. Incluso con 500 tareas, encuentras la correcta en un pestañeo."
       },
       {
         "title": "Los grandes proyectos ya no dan miedo",
@@ -96,7 +96,7 @@
       {
         "number": "02",
         "title": "Presiona Shift+Space",
-        "description": "Desde cualquier aplicación, en cualquier lugar de tu computadora. Tu lista aparece instantáneamente.",
+        "description": "Desde cualquier aplicación, en cualquier lugar de tu computadora. Tu lista aparece al instante.",
         "badge": "El atajo mágico"
       },
       {
@@ -124,19 +124,19 @@
         "name": "Thomas Laurent",
         "role": "Desarrollador Full-Stack",
         "company": "Tech Startup",
-        "content": "He probado Notion, Todoist, Things... Nada supera la velocidad de BlinkDo. En 3 segundos mi tarea está creada y ya volví a mi código."
+        "content": "He probado Notion, Todoist, Things... Nada supera la capacidad de respuesta de BlinkDo. En 3 segundos mi tarea está creada y ya volví a mi código."
       },
       {
         "name": "Sarah Martin",
         "role": "Gerente de Proyecto",
         "company": "Agencia Digital",
-        "content": "A mis equipos les encanta. Ya no hay que abrir 10 apps para gestionar nuestras tareas. BlinkDo siempre está ahí, accesible al instante. Un cambio total."
+        "content": "A mis equipos les encanta. Ya no hay que abrir 10 apps para gestionar nuestras tareas. BlinkDo siempre está ahí, accesible en un pestañeo. Un cambio total."
       },
       {
         "name": "Lucas Petit",
         "role": "Estudiante de Informática",
         "company": "École 42",
-        "content": "Gratis, sin cuenta, ultra rápido... Es exactamente lo que necesitaba para mis proyectos personales y clases. ¡Se lo recomiendo a todos mis amigos!"
+        "content": "Gratis, sin cuenta, rapidísimo... Es exactamente lo que necesitaba para mis proyectos personales y clases. ¡Se lo recomiendo a todos mis amigos!"
       },
       {
         "name": "Emma Rousseau",
@@ -314,11 +314,11 @@
   "footer": {
     "ctaBadge": "Open Source · 100% Privado · Disponible Ahora",
     "ctaTitle": "¿Listo para transformar tu productividad?",
-    "ctaSubtitle": "Únete a las 10,000+ personas que gestionan sus tareas en un instante con BlinkDo",
+    "ctaSubtitle": "Únete a las 10,000+ personas que gestionan sus tareas en un pestañeo con BlinkDo",
     "downloadButton": "Prueba gratis (14 días)",
     "githubButton": "Ver código fuente",
     "platforms": "macOS 10.13+ · Windows 10+ · Linux (Ubuntu, Fedora, Arch)",
-    "description": "La app de tareas más rápida para macOS, Windows y Linux. Open Source y 100% privada.",
+    "description": "La app de tareas más ágil para macOS, Windows y Linux. Open Source y 100% privada.",
     "links": "Enlaces",
     "download": "Descargar",
     "features": "Funciones",

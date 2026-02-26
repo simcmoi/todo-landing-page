@@ -7,8 +7,8 @@
     "download": "Download"
   },
   "hero": {
-    "title": "The to-do list that appears in a flash",
-    "subtitle": "Hit Shift+Space and your to-do appears instantly over all your windows. Add a task, check it off, and it's gone. As simple as that.",
+    "title": "The to-do list that appears in a blink",
+    "subtitle": "Hit Shift+Space and your to-do appears over all your windows. Add a task, check it off, and it's gone. As simple as that.",
     "cta": "Try free (14 days)",
     "ctaSecondary": "Buy now",
     "ctaSubtext": "Open Source • 100% Private • Zero Subscription",
@@ -20,12 +20,12 @@
     "usersCount": "10,000+",
     "tasks": "Tasks managed daily",
     "tasksCount": "50,000+",
-    "speed": "Display time",
-    "speedCount": "<0.3s"
+    "speed": "Response time",
+    "speedCount": "1 blink"
   },
   "problemSolution": {
     "title": "Stop wasting time with your tasks",
-    "subtitle": "The difference between searching for your tool and having it instantly",
+    "subtitle": "The difference between searching for your tool and having it at hand",
     "without": "Without BlinkDo",
     "with": "With BlinkDo",
     "withoutProblems": [
@@ -36,11 +36,11 @@
       "Waiting several seconds to access your notes"
     ],
     "withSolutions": [
-      "One keystroke to display everything instantly",
+      "One keystroke to display everything in a blink",
       "Capture your thoughts without leaving your editor",
       "Your data stays 100% on your machine",
       "Pay once, use it forever",
-      "Appears in less than 0.3 seconds"
+      "Appears in the blink of an eye"
     ],
     "withoutResult": "Result: You lose focus and your data is exposed",
     "withResult": "Result: You stay focused, your ideas are protected",
@@ -55,7 +55,7 @@
         "description": "Capture your ideas mid-code without losing concentration. Shift+Space and it's done."
       },
       {
-        "title": "3x faster than a regular app",
+        "title": "In the blink of an eye, your tasks are there",
         "description": "While others are opening their app, you've already created your task and returned to work."
       },
       {
@@ -64,7 +64,7 @@
       },
       {
         "title": "Find any task in 2 seconds",
-        "description": "Labels, filters, instant search. Even with 500 tasks, you find the right one immediately."
+        "description": "Labels, filters, instant search. Even with 500 tasks, you find the right one in a blink."
       },
       {
         "title": "Big projects no longer scary",
@@ -96,7 +96,7 @@
       {
         "number": "02",
         "title": "Press Shift+Space",
-        "description": "From any application, anywhere on your computer. Your list appears instantly.",
+        "description": "From any application, anywhere on your computer. Your list appears right away.",
         "badge": "The magic shortcut"
       },
       {
@@ -124,19 +124,19 @@
         "name": "Thomas Laurent",
         "role": "Full-Stack Developer",
         "company": "Tech Startup",
-        "content": "I've tried Notion, Todoist, Things... Nothing beats BlinkDo's speed. In 3 seconds my task is created and I'm back in my code."
+        "content": "I've tried Notion, Todoist, Things... Nothing beats BlinkDo's responsiveness. In 3 seconds my task is created and I'm back in my code."
       },
       {
         "name": "Sarah Martin",
         "role": "Project Manager",
         "company": "Digital Agency",
-        "content": "My teams love it. No more opening 10 apps to manage our tasks. BlinkDo is always there, instantly accessible. Game changer."
+        "content": "My teams love it. No more opening 10 apps to manage our tasks. BlinkDo is always there, accessible in a blink. Game changer."
       },
       {
         "name": "Lucas Petit",
         "role": "Computer Science Student",
         "company": "École 42",
-        "content": "Free, no account, ultra fast... It's exactly what I needed for my personal projects and classes. I recommend it to all my friends!"
+        "content": "Free, no account, snappy... It's exactly what I needed for my personal projects and classes. I recommend it to all my friends!"
       },
       {
         "name": "Emma Rousseau",
@@ -314,11 +314,11 @@
   "footer": {
     "ctaBadge": "Open Source · 100% Private · Available Now",
     "ctaTitle": "Ready to transform your productivity?",
-    "ctaSubtitle": "Join the 10,000+ people who manage their tasks in a flash with BlinkDo",
+    "ctaSubtitle": "Join the 10,000+ people who manage their tasks in a blink with BlinkDo",
     "downloadButton": "Try free (14 days)",
     "githubButton": "View source code",
     "platforms": "macOS 10.13+ · Windows 10+ · Linux (Ubuntu, Fedora, Arch)",
-    "description": "The fastest to-do app for macOS, Windows and Linux. Open Source and 100% private.",
+    "description": "The most responsive to-do app for macOS, Windows and Linux. Open Source and 100% private.",
     "links": "Links",
     "download": "Download",
     "features": "Features",

@@ -21,8 +21,8 @@ export const config = {
   app: {
     name: 'BlinkDo',
     version: '0.2.7',
-    description: 'La to-do list ultra-rapide qui s\'affiche en un éclair. Open Source, 100% privé, zéro abonnement.',
-    tagline: 'La to-do list qui apparaît en un éclair',
+    description: 'La to-do list qui s\'affiche en un clin d\'œil. Open Source, 100% privée, zéro abonnement.',
+    tagline: 'La to-do list qui apparaît en un clin d\'œil',
     url: 'https://blinkdo.app',
     author: 'Simon Fessy',
     license: 'GPL-3.0',

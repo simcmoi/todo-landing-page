@@ -7,8 +7,8 @@
     "download": "下载"
   },
   "hero": {
-    "title": "瞬间出现的待办事项",
-    "subtitle": "按下 Shift+Space，您的待办事项立即显示在所有窗口之上。添加任务、勾选完成，然后它就消失了。就是这么简单。",
+    "title": "眨眼间出现的待办清单",
+    "subtitle": "按下 Shift+Space，您的待办事项显示在所有窗口之上。添加任务、勾选完成，然后它就消失了。就是这么简单。",
     "cta": "免费试用（14天）",
     "ctaSecondary": "立即购买",
     "ctaSubtext": "开源 • 100%私密 • 零订阅",
@@ -20,12 +20,12 @@
     "usersCount": "10,000+",
     "tasks": "每日管理任务数",
     "tasksCount": "50,000+",
-    "speed": "显示时间",
-    "speedCount": "<0.3秒"
+    "speed": "响应时间",
+    "speedCount": "眨眼间"
   },
   "problemSolution": {
     "title": "停止在任务上浪费时间",
-    "subtitle": "寻找工具和即时获得工具之间的区别",
+    "subtitle": "寻找工具与即时拥有工具之间的区别",
     "without": "没有 BlinkDo",
     "with": "使用 BlinkDo",
     "withoutProblems": [
@@ -36,11 +36,11 @@
       "等待几秒钟才能访问笔记"
     ],
     "withSolutions": [
-      "一键即可立即显示所有内容",
+      "一键即可眨眼间显示所有内容",
       "无需离开编辑器即可捕捉想法",
       "您的数据100%保留在您的机器上",
       "一次付费，终身使用",
-      "不到 0.3 秒即可出现"
+      "眨眼间出现"
     ],
     "withoutResult": "结果：您失去专注力，数据暴露",
     "withResult": "结果：您保持专注，想法受到保护",
@@ -55,7 +55,7 @@
         "description": "在编码过程中捕捉想法而不失去专注。Shift+Space 就完成了。"
       },
       {
-        "title": "比普通应用快 3 倍",
+        "title": "眨眼间，您的任务就在那里",
         "description": "当其他人还在打开应用时，您已经创建了任务并返回工作。"
       },
       {
@@ -64,7 +64,7 @@
       },
       {
         "title": "2 秒内找到任何任务",
-        "description": "标签、过滤器、即时搜索。即使有 500 个任务，您也能立即找到正确的那个。"
+        "description": "标签、过滤器、即时搜索。即使有 500 个任务，您也能眨眼间找到正确的那个。"
       },
       {
         "title": "大项目不再可怕",
@@ -96,7 +96,7 @@
       {
         "number": "02",
         "title": "按 Shift+Space",
-        "description": "从任何应用程序，计算机上的任何位置。您的列表立即出现。",
+        "description": "从任何应用程序，计算机上的任何位置。您的列表即刻出现。",
         "badge": "神奇的快捷键"
       },
       {
@@ -124,19 +124,19 @@
         "name": "Thomas Laurent",
         "role": "全栈开发人员",
         "company": "科技初创公司",
-        "content": "我试过 Notion、Todoist、Things... 没有什么能超过 BlinkDo 的速度。3 秒钟我的任务就创建了，我已经回到代码中了。"
+        "content": "我试过 Notion、Todoist、Things... 没有什么能超过 BlinkDo 的响应速度。3 秒钟我的任务就创建了，我已经回到代码中了。"
       },
       {
         "name": "Sarah Martin",
         "role": "项目经理",
         "company": "数字代理",
-        "content": "我的团队很喜欢。不再需要打开 10 个应用程序来管理我们的任务。BlinkDo 始终在那里，可以即时访问。游戏规则改变者。"
+        "content": "我的团队很喜欢。不再需要打开 10 个应用程序来管理我们的任务。BlinkDo 始终在那里，眨眼间即可访问。游戏规则改变者。"
       },
       {
         "name": "Lucas Petit",
         "role": "计算机科学学生",
         "company": "École 42",
-        "content": "免费、无需账户、超快... 这正是我个人项目和课程所需要的。我向所有朋友推荐！"
+        "content": "免费、无需账户、响应迅速... 这正是我个人项目和课程所需要的。我向所有朋友推荐！"
       },
       {
         "name": "Emma Rousseau",
@@ -314,11 +314,11 @@
   "footer": {
     "ctaBadge": "开源 · 100%私密 · 现已推出",
     "ctaTitle": "准备好改变您的生产力了吗？",
-    "ctaSubtitle": "加入 10,000+ 使用 BlinkDo 瞬间管理任务的人",
+    "ctaSubtitle": "加入 10,000+ 使用 BlinkDo 眨眼间管理任务的人",
     "downloadButton": "免费试用（14天）",
     "githubButton": "查看源代码",
     "platforms": "macOS 10.13+ · Windows 10+ · Linux (Ubuntu, Fedora, Arch)",
-    "description": "适用于 macOS、Windows 和 Linux 的最快待办事项应用。开源且100%私密。",
+    "description": "适用于 macOS、Windows 和 Linux 的最快响应待办事项应用。开源且100%私密。",
     "links": "链接",
     "download": "下载",
     "features": "功能",
