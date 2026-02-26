@@ -113,8 +113,12 @@ export function Pricing() {
   const savingsPercentage = Math.round(((4 * 12 - 29) / (4 * 12)) * 100)
 
   return (
-    <section id="pricing" className="py-24 bg-secondary/20">
-      <div className="container px-4 md:px-6">
+    <section id="pricing" className="py-24 bg-gradient-to-br from-[#ffdd00]/5 via-background to-[#97acc8]/10 relative overflow-hidden">
+      {/* Decorative blobs */}
+      <div className="absolute top-0 right-20 w-96 h-96 bg-[#97acc8]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-20 w-96 h-96 bg-[#ffdd00]/10 rounded-full blur-3xl" />
+      
+      <div className="container px-4 md:px-6 relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -206,15 +210,15 @@ export function Pricing() {
                 <Card
                   className={`relative h-full ${
                     plan.popular
-                      ? "border-primary shadow-md"
+                      ? "border-[#97acc8] shadow-lg shadow-[#97acc8]/20 bg-gradient-to-br from-[#97acc8]/5 to-background"
                       : plan.lifetime
-                      ? "border-muted-foreground/20 shadow-md"
-                      : "border-border shadow-sm"
+                      ? "border-[#ffdd00] shadow-lg shadow-[#ffdd00]/20 bg-gradient-to-br from-[#ffdd00]/5 to-background"
+                      : "border-border shadow-sm bg-card"
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-3 left-0 right-0 flex justify-center z-10">
-                      <Badge className="bg-primary text-primary-foreground px-3 py-1">
+                      <Badge className="bg-gradient-to-r from-[#97acc8] to-[#7a92ad] text-white px-3 py-1 shadow-lg shadow-[#97acc8]/30">
                         Le plus populaire
                       </Badge>
                     </div>
@@ -222,7 +226,7 @@ export function Pricing() {
                   
                   {plan.lifetime && (
                     <div className="absolute -top-3 left-0 right-0 flex justify-center z-10">
-                      <Badge variant="outline" className="bg-background px-3 py-1">
+                      <Badge variant="outline" className="bg-gradient-to-r from-[#ffdd00] to-[#f5cc00] text-yellow-900 border-[#ffdd00] px-3 py-1 shadow-lg shadow-[#ffdd00]/30">
                         <Infinity className="h-3 w-3 mr-1" />
                         Paiement unique
                       </Badge>
@@ -262,7 +266,13 @@ export function Pricing() {
 
                   <CardContent>
                     <Button 
-                      className="w-full"
+                      className={`w-full ${
+                        plan.popular 
+                          ? 'bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] shadow-lg shadow-[#97acc8]/30' 
+                          : plan.lifetime
+                          ? 'bg-gradient-to-r from-[#ffdd00] to-[#f5cc00] hover:from-[#f5cc00] hover:to-[#ebc300] text-yellow-950 shadow-lg shadow-[#ffdd00]/30'
+                          : ''
+                      }`}
                       size="lg" 
                       variant={plan.popular || plan.lifetime ? "default" : "outline"}
                     >

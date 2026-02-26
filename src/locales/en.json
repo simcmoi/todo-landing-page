@@ -1,0 +1,258 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "github": "GitHub",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "The to-do list that appears in a flash",
+    "subtitle": "Hit Shift+Space and your to-do appears instantly over all your windows. Add a task, check it off, and it's gone. As simple as that.",
+    "cta": "Download for {{os}}",
+    "ctaDefault": "Download Todo Overlay",
+    "ctaSubtext": "No account required • Free forever"
+  },
+  "socialProof": {
+    "badge": "10,000+ satisfied users",
+    "users": "Active users",
+    "usersCount": "10,000+",
+    "tasks": "Tasks managed daily",
+    "tasksCount": "50,000+",
+    "speed": "Display time",
+    "speedCount": "<0.3s"
+  },
+  "problemSolution": {
+    "title": "Stop wasting time with your tasks",
+    "subtitle": "The difference between searching for your tool and having it instantly",
+    "without": "Without Todo Overlay",
+    "with": "With Todo Overlay",
+    "withoutProblems": [
+      "Opening a dedicated app for every little task",
+      "Losing track of your ideas while coding",
+      "Juggling between multiple tools to stay organized",
+      "Waiting several seconds to access your notes"
+    ],
+    "withSolutions": [
+      "One keystroke to display everything instantly",
+      "Capture your thoughts without leaving your editor",
+      "One tool, always within reach",
+      "Appears in less than 0.3 seconds"
+    ],
+    "withoutResult": "Result: You lose focus and your productivity drops",
+    "withResult": "Result: You stay focused and accomplish 3x more in less time",
+    "cta": "Try it free now"
+  },
+  "features": {
+    "title": "Designed to save you time",
+    "subtitle": "Not features - concrete results for your productivity",
+    "list": [
+      {
+        "title": "Zero interruption to your flow",
+        "description": "Capture your ideas mid-code without losing concentration. Shift+Space and it's done."
+      },
+      {
+        "title": "3x faster than a regular app",
+        "description": "While others are opening their app, you've already created your task and returned to work."
+      },
+      {
+        "title": "Everything organized, nothing forgotten",
+        "description": "Separate work and personal. Each project has its space. No more mental chaos."
+      },
+      {
+        "title": "Find any task in 2 seconds",
+        "description": "Labels, filters, instant search. Even with 500 tasks, you find the right one immediately."
+      },
+      {
+        "title": "Big projects no longer scary",
+        "description": "Break down each goal into actionable steps. Progress becomes addictive."
+      },
+      {
+        "title": "Never \"I forgot\" again",
+        "description": "Reminders that appear at the right time, on your system. No need to check the app."
+      },
+      {
+        "title": "Work at 3 AM without burning your eyes",
+        "description": "Automatic dark mode that follows your rhythm. Because night coding deserves comfort."
+      },
+      {
+        "title": "Reorganize priorities in one gesture",
+        "description": "Plans change? Drag, drop, it's reorganized. No friction between you and action."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Simple as hello",
+    "subtitle": "Three steps to transform your productivity. No learning curve, no hassle.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Download in 30 seconds",
+        "description": "Install Todo Overlay on macOS, Windows or Linux. No account needed, no complex setup."
+      },
+      {
+        "number": "02",
+        "title": "Press Shift+Space",
+        "description": "From any application, anywhere on your computer. Your list appears instantly.",
+        "badge": "The magic shortcut"
+      },
+      {
+        "number": "03",
+        "title": "Manage your tasks in a flash",
+        "description": "Add, edit, check off. Then press Shift+Space again to return to your work."
+      }
+    ],
+    "cta": "Download Todo Overlay",
+    "ctaSubtext": "Ready to try? It's free and no commitment.",
+    "platforms": "macOS • Windows • Linux"
+  },
+  "testimonials": {
+    "badge": "10,000+ satisfied users",
+    "title": "They transformed their productivity",
+    "subtitle": "Discover how Todo Overlay is changing the lives of thousands of people every day",
+    "list": [
+      {
+        "name": "Marie Dubois",
+        "role": "UI/UX Designer",
+        "company": "Freelance",
+        "content": "Shift+Space has become a reflex. I capture all my ideas during design sessions without ever losing my flow. It's just magic."
+      },
+      {
+        "name": "Thomas Laurent",
+        "role": "Full-Stack Developer",
+        "company": "Tech Startup",
+        "content": "I've tried Notion, Todoist, Things... Nothing beats Todo Overlay's speed. In 3 seconds my task is created and I'm back in my code."
+      },
+      {
+        "name": "Sarah Martin",
+        "role": "Project Manager",
+        "company": "Digital Agency",
+        "content": "My teams love it. No more opening 10 apps to manage our tasks. Todo Overlay is always there, instantly accessible. Game changer."
+      },
+      {
+        "name": "Lucas Petit",
+        "role": "Computer Science Student",
+        "company": "École 42",
+        "content": "Free, no account, ultra fast... It's exactly what I needed for my personal projects and classes. I recommend it to all my friends!"
+      },
+      {
+        "name": "Emma Rousseau",
+        "role": "Product Manager",
+        "company": "SaaS Company",
+        "content": "The unlimited subtasks feature saved my life. I break down all my big projects and see my progress in real time. Addictive!"
+      },
+      {
+        "name": "Alexandre Chen",
+        "role": "DevOps Engineer",
+        "company": "Scale-up Tech",
+        "content": "I often work at night, automatic dark mode is perfect. And above all, it uses no RAM. Perfect for my multi-project setup."
+      },
+      {
+        "name": "Julie Bernard",
+        "role": "Writer",
+        "company": "Online Media",
+        "content": "Native reminders are great. I no longer forget my deadlines. And the fact that everything is local reassures me for my articles in progress."
+      },
+      {
+        "name": "Maxime Fontaine",
+        "role": "Entrepreneur",
+        "company": "Startup",
+        "content": "Todo Overlay helps me juggle 5 different projects. Multi-lists and colored tags make everything so much clearer. A must-have."
+      }
+    ]
+  },
+  "founderStory": {
+    "badge": "Why Todo Overlay exists",
+    "greeting": "Hey 👋",
+    "story": [
+      "I'm a developer, and like you, I was constantly juggling between my tasks. I opened Notion for one idea, Apple Notes for another, a .txt file for my urgent todos...",
+      "One day, in the middle of an intense coding session, I lost 15 minutes finding where I had noted an important detail. That's when I realized: the problem isn't organization, it's access.",
+      "\"What if my to-do list was always exactly one keyboard shortcut away from me?\"",
+      "I built Todo Overlay for myself first. No account to create, no complex sync, no distractions. Just Shift+Space and there's my list. Shift+Space again, it's gone.",
+      "Today, over 10,000 people use it daily. Developers, designers, students, entrepreneurs. All with the same need: capture their thoughts without losing focus.",
+      "Todo Overlay is free, ad-free, and will remain so forever. Because productivity should never be a luxury."
+    ],
+    "highlight": "\"What if my to-do list was always exactly one keyboard shortcut away from me?\"",
+    "author": "[Your Name]",
+    "role": "Creator of Todo Overlay",
+    "cta": "Download for free",
+    "ctaSubtext": "Join the community and try it yourself"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about Todo Overlay",
+    "questions": [
+      {
+        "q": "Is it really free?",
+        "a": "Yes, 100% free. No trial period, no hidden premium version, no ads. Todo Overlay is and will always remain free for everyone."
+      },
+      {
+        "q": "Do I need to create an account?",
+        "a": "No! That's one of the great advantages of Todo Overlay. Download, install, and you're set. Your data stays on your machine, no account required."
+      },
+      {
+        "q": "Is my data synced between my devices?",
+        "a": "Currently, Todo Overlay works locally on each machine to ensure speed and privacy. Cloud sync is on our roadmap, but always as an option for those who want it."
+      },
+      {
+        "q": "Which platforms does Todo Overlay run on?",
+        "a": "Todo Overlay is available on macOS (10.13+), Windows (10+) and Linux (Ubuntu, Fedora, Arch). The app is native on each platform for optimal performance."
+      },
+      {
+        "q": "Can I customize the keyboard shortcut?",
+        "a": "Absolutely! While Shift+Space is the default shortcut (and recommended for its simplicity), you can customize it in settings according to your preferences."
+      },
+      {
+        "q": "Does it slow down my computer?",
+        "a": "Not at all. Todo Overlay uses less than 50MB of RAM in the background and has no impact on your system performance. It's optimized to be invisible until you need it."
+      },
+      {
+        "q": "Can I organize my tasks by project or category?",
+        "a": "Yes! Todo Overlay supports tags, projects, and filters to organize your tasks as you wish. All while keeping the interface simple and fast."
+      },
+      {
+        "q": "What happens if I accidentally close the app?",
+        "a": "Nothing serious! All your tasks are automatically saved in real time. Even if you restart your computer, everything will be there on next launch."
+      },
+      {
+        "q": "Is there a mobile app?",
+        "a": "Not yet, but it's in our plans! For now, Todo Overlay focuses on the desktop experience where keyboard shortcut access speed makes all the difference."
+      },
+      {
+        "q": "How can I contribute or give feedback?",
+        "a": "We love user feedback! Join our Discord, send us an email, or open an issue on GitHub. All suggestions are welcome."
+      }
+    ],
+    "stillQuestions": "Still have questions?",
+    "stillQuestionsSubtext": "Our team is here to help. Don't hesitate to contact us!",
+    "discord": "Join Discord",
+    "email": "Send an email"
+  },
+  "footer": {
+    "ctaBadge": "Free · No account · Available now",
+    "ctaTitle": "Ready to transform your productivity?",
+    "ctaSubtitle": "Join the 10,000+ people who manage their tasks in a flash with Todo Overlay",
+    "downloadButton": "Download for free",
+    "githubButton": "View on GitHub",
+    "platforms": "macOS 10.13+ · Windows 10+ · Linux (Ubuntu, Fedora, Arch)",
+    "description": "The most efficient to-do app for macOS, Windows and Linux.",
+    "links": "Links",
+    "download": "Download",
+    "features": "Features",
+    "info": "Information",
+    "version": "Version 0.2.0",
+    "license": "MIT License",
+    "copyright": "© 2026 Simon Fessy",
+    "madeWith": "Made with",
+    "by": "by Simon Fessy"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "of": "of"
+  }
+}

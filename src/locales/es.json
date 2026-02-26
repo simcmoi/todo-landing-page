@@ -1,0 +1,258 @@
+{
+  "nav": {
+    "features": "Funciones",
+    "pricing": "Precios",
+    "faq": "FAQ",
+    "github": "GitHub",
+    "download": "Descargar"
+  },
+  "hero": {
+    "title": "La lista de tareas que aparece en un instante",
+    "subtitle": "Presiona Shift+Space y tu lista de tareas aparece instantáneamente sobre todas tus ventanas. Agrega una tarea, márcala y desaparece. Así de simple.",
+    "cta": "Descargar para {{os}}",
+    "ctaDefault": "Descargar Todo Overlay",
+    "ctaSubtext": "Sin cuenta requerida • Gratis para siempre"
+  },
+  "socialProof": {
+    "badge": "10,000+ usuarios satisfechos",
+    "users": "Usuarios activos",
+    "usersCount": "10,000+",
+    "tasks": "Tareas gestionadas por día",
+    "tasksCount": "50,000+",
+    "speed": "Tiempo de aparición",
+    "speedCount": "<0.3s"
+  },
+  "problemSolution": {
+    "title": "Deja de perder tiempo con tus tareas",
+    "subtitle": "La diferencia entre buscar tu herramienta y tenerla al instante",
+    "without": "Sin Todo Overlay",
+    "with": "Con Todo Overlay",
+    "withoutProblems": [
+      "Abrir una app dedicada para cada pequeña tarea",
+      "Perder el hilo de tus ideas mientras programas",
+      "Hacer malabares entre varias herramientas para mantenerte organizado",
+      "Esperar varios segundos para acceder a tus notas"
+    ],
+    "withSolutions": [
+      "Una sola tecla para mostrarlo todo instantáneamente",
+      "Captura tus pensamientos sin salir de tu editor",
+      "Una sola herramienta, siempre al alcance",
+      "Aparece en menos de 0.3 segundos"
+    ],
+    "withoutResult": "Resultado: Pierdes la concentración y tu productividad cae",
+    "withResult": "Resultado: Te mantienes concentrado y logras 3x más en menos tiempo",
+    "cta": "Pruébalo gratis ahora"
+  },
+  "features": {
+    "title": "Diseñado para ahorrarte tiempo",
+    "subtitle": "No son funciones - son resultados concretos para tu productividad",
+    "list": [
+      {
+        "title": "Cero interrupciones en tu flujo",
+        "description": "Captura tus ideas en pleno código sin perder la concentración. Shift+Space y listo."
+      },
+      {
+        "title": "3x más rápido que una app normal",
+        "description": "Mientras otros abren su app, tú ya creaste tu tarea y volviste al trabajo."
+      },
+      {
+        "title": "Todo organizado, nada olvidado",
+        "description": "Separa trabajo y personal. Cada proyecto tiene su espacio. No más caos mental."
+      },
+      {
+        "title": "Encuentra cualquier tarea en 2 segundos",
+        "description": "Etiquetas, filtros, búsqueda instantánea. Incluso con 500 tareas, encuentras la correcta de inmediato."
+      },
+      {
+        "title": "Los grandes proyectos ya no dan miedo",
+        "description": "Descompone cada objetivo en pasos accionables. El progreso se vuelve adictivo."
+      },
+      {
+        "title": "Nunca más \"se me olvidó\"",
+        "description": "Recordatorios que aparecen en el momento justo, en tu sistema. No necesitas revisar la app."
+      },
+      {
+        "title": "Trabaja a las 3 AM sin quemarte los ojos",
+        "description": "Modo oscuro automático que sigue tu ritmo. Porque programar de noche merece comodidad."
+      },
+      {
+        "title": "Reorganiza prioridades con un gesto",
+        "description": "¿Cambian los planes? Arrastra, suelta, está reorganizado. Sin fricción entre tú y la acción."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Simple como hola",
+    "subtitle": "Tres pasos para transformar tu productividad. Sin curva de aprendizaje, sin complicaciones.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Descarga en 30 segundos",
+        "description": "Instala Todo Overlay en macOS, Windows o Linux. Sin cuenta necesaria, sin configuración compleja."
+      },
+      {
+        "number": "02",
+        "title": "Presiona Shift+Space",
+        "description": "Desde cualquier aplicación, en cualquier lugar de tu computadora. Tu lista aparece instantáneamente.",
+        "badge": "El atajo mágico"
+      },
+      {
+        "number": "03",
+        "title": "Gestiona tus tareas en un instante",
+        "description": "Agrega, edita, marca. Luego presiona Shift+Space de nuevo para volver a tu trabajo."
+      }
+    ],
+    "cta": "Descargar Todo Overlay",
+    "ctaSubtext": "¿Listo para probar? Es gratis y sin compromiso.",
+    "platforms": "macOS • Windows • Linux"
+  },
+  "testimonials": {
+    "badge": "10,000+ usuarios satisfechos",
+    "title": "Transformaron su productividad",
+    "subtitle": "Descubre cómo Todo Overlay está cambiando la vida de miles de personas cada día",
+    "list": [
+      {
+        "name": "Marie Dubois",
+        "role": "Diseñadora UI/UX",
+        "company": "Freelance",
+        "content": "Shift+Space se ha vuelto un reflejo. Capturo todas mis ideas durante mis sesiones de diseño sin perder mi flujo. Es simplemente mágico."
+      },
+      {
+        "name": "Thomas Laurent",
+        "role": "Desarrollador Full-Stack",
+        "company": "Tech Startup",
+        "content": "He probado Notion, Todoist, Things... Nada supera la velocidad de Todo Overlay. En 3 segundos mi tarea está creada y ya volví a mi código."
+      },
+      {
+        "name": "Sarah Martin",
+        "role": "Gerente de Proyecto",
+        "company": "Agencia Digital",
+        "content": "A mis equipos les encanta. Ya no hay que abrir 10 apps para gestionar nuestras tareas. Todo Overlay siempre está ahí, accesible al instante. Un cambio total."
+      },
+      {
+        "name": "Lucas Petit",
+        "role": "Estudiante de Informática",
+        "company": "École 42",
+        "content": "Gratis, sin cuenta, ultra rápido... Es exactamente lo que necesitaba para mis proyectos personales y clases. ¡Se lo recomiendo a todos mis amigos!"
+      },
+      {
+        "name": "Emma Rousseau",
+        "role": "Product Manager",
+        "company": "SaaS Company",
+        "content": "La función de subtareas ilimitadas me salvó la vida. Descompongo todos mis grandes proyectos y veo mi progreso en tiempo real. ¡Adictivo!"
+      },
+      {
+        "name": "Alexandre Chen",
+        "role": "Ingeniero DevOps",
+        "company": "Scale-up Tech",
+        "content": "Trabajo a menudo de noche, el modo oscuro automático es perfecto. Y sobre todo, no consume nada de RAM. Perfecto para mi configuración multi-proyecto."
+      },
+      {
+        "name": "Julie Bernard",
+        "role": "Redactora",
+        "company": "Medios Online",
+        "content": "Los recordatorios nativos son geniales. Ya no olvido mis plazos. Y el hecho de que todo sea local me tranquiliza para mis artículos en curso."
+      },
+      {
+        "name": "Maxime Fontaine",
+        "role": "Emprendedor",
+        "company": "Startup",
+        "content": "Todo Overlay me ayuda a hacer malabares con 5 proyectos diferentes. Las multi-listas y etiquetas de colores hacen todo mucho más claro. Imprescindible."
+      }
+    ]
+  },
+  "founderStory": {
+    "badge": "Por qué existe Todo Overlay",
+    "greeting": "Hey 👋",
+    "story": [
+      "Soy desarrollador, y como tú, hacía malabares constantemente entre mis tareas. Abría Notion para una idea, Apple Notes para otra, un archivo .txt para mis tareas urgentes...",
+      "Un día, en medio de una sesión intensa de código, perdí 15 minutos buscando dónde había anotado un detalle importante. Fue entonces cuando me di cuenta: el problema no es la organización, es el acceso.",
+      "\"¿Y si mi lista de tareas estuviera siempre a exactamente un atajo de teclado de mí?\"",
+      "Construí Todo Overlay para mí primero. Sin cuenta que crear, sin sincronización compleja, sin distracciones. Solo Shift+Space y ahí está mi lista. Shift+Space de nuevo, desaparece.",
+      "Hoy, más de 10,000 personas lo usan a diario. Desarrolladores, diseñadores, estudiantes, emprendedores. Todos con la misma necesidad: capturar sus pensamientos sin perder el enfoque.",
+      "Todo Overlay es gratis, sin publicidad, y lo seguirá siendo siempre. Porque la productividad nunca debería ser un lujo."
+    ],
+    "highlight": "\"¿Y si mi lista de tareas estuviera siempre a exactamente un atajo de teclado de mí?\"",
+    "author": "[Tu Nombre]",
+    "role": "Creador de Todo Overlay",
+    "cta": "Descargar gratis",
+    "ctaSubtext": "Únete a la comunidad y pruébalo tú mismo"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre Todo Overlay",
+    "questions": [
+      {
+        "q": "¿Es realmente gratis?",
+        "a": "Sí, 100% gratis. Sin período de prueba, sin versión premium oculta, sin anuncios. Todo Overlay es y seguirá siendo gratis para todos."
+      },
+      {
+        "q": "¿Necesito crear una cuenta?",
+        "a": "¡No! Es una de las grandes ventajas de Todo Overlay. Descarga, instala y listo. Tus datos permanecen en tu máquina, sin cuenta requerida."
+      },
+      {
+        "q": "¿Mis datos se sincronizan entre mis dispositivos?",
+        "a": "Actualmente, Todo Overlay funciona localmente en cada máquina para garantizar velocidad y privacidad. La sincronización en la nube está en nuestra hoja de ruta, pero siempre como opción para quienes la deseen."
+      },
+      {
+        "q": "¿En qué plataformas funciona Todo Overlay?",
+        "a": "Todo Overlay está disponible en macOS (10.13+), Windows (10+) y Linux (Ubuntu, Fedora, Arch). La app es nativa en cada plataforma para un rendimiento óptimo."
+      },
+      {
+        "q": "¿Puedo personalizar el atajo de teclado?",
+        "a": "¡Absolutamente! Aunque Shift+Space es el atajo predeterminado (y recomendado por su simplicidad), puedes personalizarlo en la configuración según tus preferencias."
+      },
+      {
+        "q": "¿Ralentiza mi computadora?",
+        "a": "Para nada. Todo Overlay usa menos de 50MB de RAM en segundo plano y no tiene impacto en el rendimiento de tu sistema. Está optimizado para ser invisible hasta que lo necesites."
+      },
+      {
+        "q": "¿Puedo organizar mis tareas por proyecto o categoría?",
+        "a": "¡Sí! Todo Overlay admite etiquetas, proyectos y filtros para organizar tus tareas como desees. Todo mientras mantiene la interfaz simple y rápida."
+      },
+      {
+        "q": "¿Qué pasa si cierro la app por accidente?",
+        "a": "¡Nada grave! Todas tus tareas se guardan automáticamente en tiempo real. Incluso si reinicias tu computadora, todo estará ahí en el próximo inicio."
+      },
+      {
+        "q": "¿Hay una app móvil?",
+        "a": "Aún no, ¡pero está en nuestros planes! Por ahora, Todo Overlay se enfoca en la experiencia de escritorio donde la velocidad de acceso por atajo de teclado marca toda la diferencia."
+      },
+      {
+        "q": "¿Cómo puedo contribuir o dar feedback?",
+        "a": "¡Nos encanta el feedback de nuestros usuarios! Únete a nuestro Discord, envíanos un email o abre un issue en GitHub. Todas las sugerencias son bienvenidas."
+      }
+    ],
+    "stillQuestions": "¿Todavía tienes preguntas?",
+    "stillQuestionsSubtext": "Nuestro equipo está aquí para ayudarte. ¡No dudes en contactarnos!",
+    "discord": "Unirse a Discord",
+    "email": "Enviar un email"
+  },
+  "footer": {
+    "ctaBadge": "Gratis · Sin cuenta · Disponible ahora",
+    "ctaTitle": "¿Listo para transformar tu productividad?",
+    "ctaSubtitle": "Únete a las 10,000+ personas que gestionan sus tareas en un instante con Todo Overlay",
+    "downloadButton": "Descargar gratis",
+    "githubButton": "Ver en GitHub",
+    "platforms": "macOS 10.13+ · Windows 10+ · Linux (Ubuntu, Fedora, Arch)",
+    "description": "La app de tareas más eficiente para macOS, Windows y Linux.",
+    "links": "Enlaces",
+    "download": "Descargar",
+    "features": "Funciones",
+    "info": "Información",
+    "version": "Versión 0.2.0",
+    "license": "Licencia MIT",
+    "copyright": "© 2026 Simon Fessy",
+    "madeWith": "Hecho con",
+    "by": "por Simon Fessy"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "retry": "Reintentar",
+    "close": "Cerrar",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "of": "de"
+  }
+}

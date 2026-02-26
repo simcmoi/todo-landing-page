@@ -1,64 +1,68 @@
 import { motion } from "framer-motion"
-import { Download, Github, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getDownloadLink, detectOS } from "@/config"
+import { useTranslation } from "react-i18next"
 
 export function Hero() {
+  const { t } = useTranslation()
+  const os = detectOS()
+  const downloadButtonText = os ? t("hero.cta", { os }) : t("hero.ctaDefault")
+  
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-      <div className="container px-4 md:px-6">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Gradient background with #ffdd00 and #97acc8 accents */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#97acc8]/5 via-background to-[#ffdd00]/5" />
+      <div className="absolute top-20 right-10 w-96 h-96 bg-[#ffdd00]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#97acc8]/10 rounded-full blur-3xl" />
+      
+      <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-8 text-center">
+          {/* Titre principal - La promesse */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-6"
+            className="space-y-6 max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium">
-              <Zap className="h-4 w-4" />
-              <span>Workflow ultra-rapide</span>
-            </div>
+            <motion.h1 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
+            >
+              {t("hero.title")}
+            </motion.h1>
             
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-              Todo Overlay
-            </h1>
-            
-            <p className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
-              L'application de to-do la plus efficace. Shift+Space pour affichage instantané.
-              <br />
-              Gestion multi-listes, labels, sous-tâches illimitées et rappels.
-            </p>
+            {/* Sous-titre explicatif */}
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl"
+            >
+              {t("hero.subtitle")}
+            </motion.p>
           </motion.div>
 
+          {/* Call to Action principal */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-col gap-4 sm:flex-row"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col gap-4 sm:flex-row items-center"
           >
-            <Button size="lg">
-              <Download />
-              Télécharger pour macOS
-            </Button>
-            
-            <Button size="lg" variant="outline" asChild>
-              <a href="https://github.com/simonfessy/todo-overlay" target="_blank" rel="noopener noreferrer">
-                <Github />
-                Voir sur GitHub
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] shadow-lg shadow-[#97acc8]/30 text-lg px-8 py-6"
+              asChild
+            >
+              <a href={getDownloadLink()} target="_blank" rel="noopener noreferrer">
+                {downloadButtonText}
               </a>
             </Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12 w-full max-w-5xl"
-          >
-            <div className="relative rounded-xl border bg-card shadow-lg overflow-hidden">
-              <div className="aspect-video bg-muted flex items-center justify-center">
-                <p className="text-muted-foreground">Screenshot / Demo Video</p>
-              </div>
-            </div>
+            <p className="text-sm text-muted-foreground">
+              {t("hero.ctaSubtext")}
+            </p>
           </motion.div>
         </div>
       </div>

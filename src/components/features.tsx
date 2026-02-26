@@ -9,49 +9,7 @@ import {
   CheckSquare,
   Keyboard
 } from "lucide-react"
-
-const features = [
-  {
-    icon: Zap,
-    title: "Affichage instantané",
-    description: "Shift+Space pour ouvrir l'overlay en une fraction de seconde, peu importe ce que vous faites."
-  },
-  {
-    icon: Keyboard,
-    title: "Workflow ultra-rapide",
-    description: "Créez une tâche, ajoutez des détails, définissez une date - tout au clavier, en quelques secondes."
-  },
-  {
-    icon: ListTree,
-    title: "Multi-listes",
-    description: "Organisez vos tâches en listes multiples. Personnel, Travail, Projets - chacun sa place."
-  },
-  {
-    icon: Tag,
-    title: "Labels & Organisation",
-    description: "Catégorisez avec des labels colorés. Filtrez et retrouvez vos tâches instantanément."
-  },
-  {
-    icon: CheckSquare,
-    title: "Sous-tâches illimitées",
-    description: "Décomposez vos projets complexes en sous-tâches imbriquées à l'infini."
-  },
-  {
-    icon: Bell,
-    title: "Rappels intelligents",
-    description: "Notifications natives macOS pour ne jamais oublier une tâche importante."
-  },
-  {
-    icon: Moon,
-    title: "Mode sombre/clair",
-    description: "Interface élégante qui s'adapte à vos préférences et à l'heure de la journée."
-  },
-  {
-    icon: GripVertical,
-    title: "Drag & Drop",
-    description: "Réorganisez vos tâches par simple glisser-déposer. Intuïtif et fluide."
-  }
-]
+import { useTranslation } from "react-i18next"
 
 const container = {
   hidden: { opacity: 0 },
@@ -69,9 +27,22 @@ const item = {
 }
 
 export function Features() {
+  const { t } = useTranslation()
+  
+  const featureIcons = [Zap, Keyboard, ListTree, Tag, CheckSquare, Bell, Moon, GripVertical]
+  
+  const features = Array.from({ length: 8 }, (_, i) => ({
+    icon: featureIcons[i],
+    title: t(`features.list.${i}.title`),
+    description: t(`features.list.${i}.description`),
+  }))
   return (
-    <section className="py-24 bg-background">
-      <div className="container px-4 md:px-6">
+    <section className="py-24 bg-gradient-to-b from-background via-[#97acc8]/5 to-background relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-40 left-0 w-72 h-72 bg-[#ffdd00]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-0 w-96 h-96 bg-[#97acc8]/10 rounded-full blur-3xl" />
+      
+      <div className="container px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -80,10 +51,10 @@ export function Features() {
           className="text-center space-y-4 mb-16"
         >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Tout ce dont vous avez besoin
+            {t("features.title")}
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-            Une application de to-do pensée pour la productivité maximale
+            {t("features.subtitle")}
           </p>
         </motion.div>
 
@@ -96,15 +67,23 @@ export function Features() {
         >
           {features.map((feature, index) => {
             const Icon = feature.icon
+            const colors = [
+              { bg: 'bg-[#97acc8]/10', icon: 'text-[#97acc8]', border: 'border-[#97acc8]/20', hover: 'hover:shadow-[#97acc8]/20' },
+              { bg: 'bg-[#ffdd00]/10', icon: 'text-[#ffdd00]', border: 'border-[#ffdd00]/20', hover: 'hover:shadow-[#ffdd00]/20' },
+              { bg: 'bg-[#97acc8]/15', icon: 'text-[#7a92ad]', border: 'border-[#97acc8]/30', hover: 'hover:shadow-[#97acc8]/30' },
+              { bg: 'bg-[#ffdd00]/15', icon: 'text-[#f5cc00]', border: 'border-[#ffdd00]/30', hover: 'hover:shadow-[#ffdd00]/30' },
+            ]
+            const color = colors[index % 4]
+            
             return (
               <motion.div
                 key={index}
                 variants={item}
                 className="relative group"
               >
-                <div className="flex flex-col items-start space-y-3 p-6 rounded-lg border bg-card hover:shadow-md transition-shadow duration-300">
-                  <div className="p-2 rounded-md bg-primary/10">
-                    <Icon className="h-6 w-6 text-primary" />
+                <div className={`flex flex-col items-start space-y-3 p-6 rounded-lg border ${color.border} bg-card hover:shadow-lg ${color.hover} transition-all duration-300`}>
+                  <div className={`p-2 rounded-md ${color.bg}`}>
+                    <Icon className={`h-6 w-6 ${color.icon}`} />
                   </div>
                   <h3 className="font-semibold text-lg">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>

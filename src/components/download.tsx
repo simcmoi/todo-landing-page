@@ -83,8 +83,12 @@ export function Download() {
   const PrimaryIcon = primary.icon
 
   return (
-    <section className="py-24 bg-background" id="download">
-      <div className="container px-4 md:px-6">
+    <section className="py-24 bg-gradient-to-b from-background via-[#ffdd00]/5 to-[#97acc8]/10 relative overflow-hidden" id="download">
+      {/* Decorative elements */}
+      <div className="absolute top-10 left-10 w-80 h-80 bg-[#97acc8]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#ffdd00]/10 rounded-full blur-3xl" />
+      
+      <div className="container px-4 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +119,7 @@ export function Download() {
                 </a>
               </Button>
             ) : (
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="bg-gradient-to-r from-[#97acc8] to-[#ffdd00] hover:from-[#7a92ad] hover:to-[#f5cc00] shadow-lg shadow-[#97acc8]/30">
                 <a href={primary.href}>
                   <PrimaryIcon />
                   {primary.label}
@@ -189,20 +193,20 @@ export function Download() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-12 grid gap-6 md:grid-cols-3 text-left"
           >
-            <div className="space-y-2 p-6 rounded-lg border bg-card">
-              <h3 className="font-semibold">Open Source</h3>
+            <div className="space-y-2 p-6 rounded-lg border border-[#97acc8]/20 bg-gradient-to-br from-[#97acc8]/10 to-background shadow-lg shadow-[#97acc8]/10">
+              <h3 className="font-semibold text-[#97acc8]">Open Source</h3>
               <p className="text-sm text-muted-foreground">
                 Code source disponible sur GitHub. Contribuez et personnalisez.
               </p>
             </div>
-            <div className="space-y-2 p-6 rounded-lg border bg-card">
-              <h3 className="font-semibold">Vie privée</h3>
+            <div className="space-y-2 p-6 rounded-lg border border-[#ffdd00]/20 bg-gradient-to-br from-[#ffdd00]/10 to-background shadow-lg shadow-[#ffdd00]/10">
+              <h3 className="font-semibold text-[#ffdd00]">Vie privée</h3>
               <p className="text-sm text-muted-foreground">
                 Toutes vos données restent sur votre machine. Aucun cloud, aucun tracking.
               </p>
             </div>
-            <div className="space-y-2 p-6 rounded-lg border bg-card">
-              <h3 className="font-semibold">Mises à jour auto</h3>
+            <div className="space-y-2 p-6 rounded-lg border border-[#97acc8]/20 bg-gradient-to-br from-[#97acc8]/10 to-background shadow-lg shadow-[#97acc8]/10">
+              <h3 className="font-semibold text-[#97acc8]">Mises à jour auto</h3>
               <p className="text-sm text-muted-foreground">
                 Recevez les nouvelles fonctionnalités automatiquement, sans effort.
               </p>
