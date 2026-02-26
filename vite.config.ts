@@ -6,6 +6,10 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   base: '/todo-overlay/',
+  server: {
+    port: 5174,
+    strictPort: true,
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

@@ -12,7 +12,9 @@
     "cta": "Try free (14 days)",
     "ctaSecondary": "Buy now",
     "ctaSubtext": "Open Source • 100% Private • Zero Subscription",
-    "badge": "Open Source (GPL-3.0) • 100% Local Data"
+    "badge": "Open Source (GPL-3.0) • 100% Local Data",
+    "download": "Download",
+    "downloadFor": "Download for {{platform}}"
   },
   "socialProof": {
     "badge": "10,000+ satisfied users",
@@ -30,7 +32,7 @@
     "with": "With BlinkDo",
     "withoutProblems": [
       "Opening a dedicated app for every little task",
-      "Losing track of your ideas while coding",
+      "Losing track of your ideas while working",
       "Your data stored on unknown servers",
       "Monthly subscriptions that add up",
       "Waiting several seconds to access your notes"
@@ -51,7 +53,7 @@
     "subtitle": "Not features - concrete results for your productivity",
     "list": [
       {
-        "title": "Zero interruption to your flow",
+        "title": "Zero interruption to your focus",
         "description": "Capture your ideas mid-code without losing concentration. Shift+Space and it's done."
       },
       {
@@ -118,7 +120,7 @@
         "name": "Marie Dubois",
         "role": "UI/UX Designer",
         "company": "Freelance",
-        "content": "Shift+Space has become a reflex. I capture all my ideas during design sessions without ever losing my flow. It's just magic."
+        "content": "Shift+Space has become a reflex. I capture all my ideas during design sessions without ever losing my focus. It's just magic."
       },
       {
         "name": "Thomas Laurent",
@@ -243,7 +245,9 @@
     "author": "Simon Fessy",
     "role": "Creator of BlinkDo",
     "cta": "Try free (14 days)",
-    "ctaSubtext": "No credit card required • Source code on GitHub"
+    "ctaSubtext": "No credit card required • Source code on GitHub",
+    "sourceCodeText": "The source code of BlinkDo is available on GitHub, allowing you to see exactly how the app works behind the scenes. This helps improve the app through community feedback and ensures that the app is trustworthy and protects your privacy.",
+    "sourceCodeCta": "View Source Code"
   },
   "faq": {
     "title": "Frequently asked questions",

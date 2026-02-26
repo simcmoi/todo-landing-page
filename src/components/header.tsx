@@ -35,7 +35,7 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-2">
       <div className="max-w-6xl mx-auto bg-background/80 backdrop-blur-md border border-border rounded-2xl shadow-lg">
         <div className="px-4 md:px-6">
           <div className="flex items-center justify-between h-16">
@@ -120,43 +120,16 @@ export function Header() {
                   {t("nav.github")}
                 </a>
               </Button>
-              <motion.div
-                animate={{
-                  scale: [1, 1.05, 1],
-                  boxShadow: [
-                    "0 0 0 0 rgba(151, 172, 200, 0)",
-                    "0 0 0 8px rgba(151, 172, 200, 0.2)",
-                    "0 0 0 0 rgba(151, 172, 200, 0)"
-                  ]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  repeatDelay: 1
-                }}
-                className="rounded-md"
+              <Button 
+                size="sm" 
+                className="group bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#97acc8]/20" 
+                asChild
               >
-                <Button 
-                  size="sm" 
-                  className="bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] relative overflow-hidden" 
-                  asChild
-                >
-                  <a href={getTrialLink()} target="_blank" rel="noopener noreferrer">
-                    <motion.span
-                      className="absolute inset-0 bg-white/20"
-                      animate={{
-                        x: ["-100%", "100%"]
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        repeatDelay: 3
-                      }}
-                    />
-                    <span className="relative z-10">{t("hero.cta")}</span>
-                  </a>
-                </Button>
-              </motion.div>
+                <a href={getTrialLink()} target="_blank" rel="noopener noreferrer">
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                  <span className="relative z-10">{t("hero.cta")}</span>
+                </a>
+              </Button>
             </motion.div>
 
             {/* Mobile Menu Button */}
@@ -211,37 +184,16 @@ export function Header() {
                     {t("nav.github")}
                   </a>
                 </Button>
-                <motion.div
-                  animate={{
-                    scale: [1, 1.05, 1]
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatDelay: 1
-                  }}
+                <Button 
+                  size="sm" 
+                  className="group bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] w-full relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#97acc8]/20" 
+                  asChild
                 >
-                  <Button 
-                    size="sm" 
-                    className="bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] w-full relative overflow-hidden" 
-                    asChild
-                  >
-                    <a href={getTrialLink()} target="_blank" rel="noopener noreferrer">
-                      <motion.span
-                        className="absolute inset-0 bg-white/20"
-                        animate={{
-                          x: ["-100%", "100%"]
-                        }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                          repeatDelay: 3
-                        }}
-                      />
-                      <span className="relative z-10">{t("hero.cta")}</span>
-                    </a>
-                  </Button>
-                </motion.div>
+                  <a href={getTrialLink()} target="_blank" rel="noopener noreferrer">
+                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                    <span className="relative z-10">{t("hero.cta")}</span>
+                  </a>
+                </Button>
               </div>
             </motion.div>
           )}

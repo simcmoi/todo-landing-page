@@ -12,7 +12,9 @@
     "cta": "Essayer gratuitement (14 jours)",
     "ctaSecondary": "Acheter maintenant",
     "ctaSubtext": "Open Source • 100% privé • Zéro abonnement",
-    "badge": "Open Source (GPL-3.0) • Données 100% locales"
+    "badge": "Open Source (GPL-3.0) • Données 100% locales",
+    "download": "Télécharger",
+    "downloadFor": "Télécharger pour {{platform}}"
   },
   "socialProof": {
     "badge": "10 000+ utilisateurs satisfaits",
@@ -30,7 +32,7 @@
     "with": "Avec BlinkDo",
     "withoutProblems": [
       "Ouvrir une app dédiée pour chaque petite tâche",
-      "Perdre le fil de vos idées pendant que vous codez",
+      "Perdre le fil de vos idées pendant que vous travaillez",
       "Vos données stockées sur des serveurs inconnus",
       "Abonnements mensuels qui s'accumulent",
       "Attendre plusieurs secondes pour accéder à vos notes"
@@ -51,8 +53,8 @@
     "subtitle": "Pas des fonctionnalités - des résultats concrets pour votre productivité",
     "list": [
       {
-        "title": "Zéro interruption de votre flow",
-        "description": "Capturez vos idées en plein code sans perdre votre concentration. Shift+Space et c'est fait."
+        "title": "Zéro interruption de votre concentration",
+        "description": "Capturez vos idées en plein travail sans perdre votre concentration. Shift+Space et c'est fait."
       },
       {
         "title": "Le temps d'un clin d'œil, vos tâches sont là",
@@ -118,7 +120,7 @@
         "name": "Marie Dubois",
         "role": "Designer UI/UX",
         "company": "Freelance",
-        "content": "Shift+Space est devenu un réflexe. Je capture toutes mes idées pendant mes sessions de design sans jamais perdre mon flow. C'est juste magique."
+        "content": "Shift+Space est devenu un réflexe. Je capture toutes mes idées pendant mes sessions de design sans jamais perdre ma concentration. C'est juste magique."
       },
       {
         "name": "Thomas Laurent",
@@ -243,7 +245,9 @@
     "author": "Simon Fessy",
     "role": "Créateur de BlinkDo",
     "cta": "Essayer gratuitement (14 jours)",
-    "ctaSubtext": "Aucune carte bancaire requise • Code source sur GitHub"
+    "ctaSubtext": "Aucune carte bancaire requise • Code source sur GitHub",
+    "sourceCodeText": "Le code source de BlinkDo est disponible sur GitHub, vous permettant de voir exactement comment l'application fonctionne en coulisses. Cela contribue à améliorer l'application grâce aux retours de la communauté et vous garantit que l'application est fiable et protège votre vie privée.",
+    "sourceCodeCta": "Voir le code source"
   },
   "faq": {
     "title": "Questions fréquentes",

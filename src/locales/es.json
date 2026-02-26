@@ -12,7 +12,9 @@
     "cta": "Prueba gratis (14 días)",
     "ctaSecondary": "Comprar ahora",
     "ctaSubtext": "Open Source • 100% Privado • Cero Suscripción",
-    "badge": "Open Source (GPL-3.0) • Datos 100% Locales"
+    "badge": "Open Source (GPL-3.0) • Datos 100% Locales",
+    "download": "Descargar",
+    "downloadFor": "Descargar para {{platform}}"
   },
   "socialProof": {
     "badge": "10,000+ usuarios satisfechos",
@@ -30,7 +32,7 @@
     "with": "Con BlinkDo",
     "withoutProblems": [
       "Abrir una app dedicada para cada pequeña tarea",
-      "Perder el hilo de tus ideas mientras programas",
+      "Perder el hilo de tus ideas mientras trabajas",
       "Tus datos almacenados en servidores desconocidos",
       "Suscripciones mensuales que se acumulan",
       "Esperar varios segundos para acceder a tus notas"
@@ -243,7 +245,9 @@
     "author": "Simon Fessy",
     "role": "Creador de BlinkDo",
     "cta": "Prueba gratis (14 días)",
-    "ctaSubtext": "Sin tarjeta de crédito requerida • Código fuente en GitHub"
+    "ctaSubtext": "Sin tarjeta de crédito requerida • Código fuente en GitHub",
+    "sourceCodeText": "El código fuente de BlinkDo está disponible en GitHub, permitiéndote ver exactamente cómo funciona la aplicación entre bastidores. Esto ayuda a mejorar la app a través de los comentarios de la comunidad y garantiza que la aplicación es confiable y protege tu privacidad.",
+    "sourceCodeCta": "Ver Código Fuente"
   },
   "faq": {
     "title": "Preguntas frecuentes",

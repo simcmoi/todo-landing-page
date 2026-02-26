@@ -1,0 +1,88 @@
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Download } from "lucide-react"
+import { useTranslation } from "react-i18next"
+import { usePlatform } from "@/hooks/use-platform"
+import { useGitHubReleases } from "@/hooks/use-github-releases"
+
+// Icônes SVG pour les plateformes
+const AppleLogo = () => (
+  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
+    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+  </svg>
+)
+
+const WindowsLogo = () => (
+  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
+    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+  </svg>
+)
+
+const LinuxLogo = () => (
+  <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
+    <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 01-.088.069c-.025.018-.059.033-.084.06-.029.03-.075.05-.106.073-.013.01-.025.018-.041.024l-.003.003c.007.013.012.022.018.034.038.066.072.135.107.2.07.134.143.268.207.405.12.275.224.555.295.836.055.22.088.45.096.672v.002c.003.057.005.114.006.171 0 .199-.01.398-.029.597-.038.323-.106.646-.204.95-.245.76-.623 1.467-1.098 2.055a11.52 11.52 0 01-1.479 1.525 3.53 3.53 0 00-.832.96 2.38 2.38 0 00-.279.962c-.011.191-.008.383 0 .574.003.076.007.153.014.23.007.066.02.13.035.193.014.054.03.107.046.159.018.052.035.103.056.154.02.05.041.098.066.145.024.047.05.092.08.135.03.044.062.085.098.124.036.04.075.077.117.111.044.036.089.068.137.098.044.028.09.053.138.075.047.023.095.042.145.059.052.018.106.031.159.043.055.012.111.021.168.027.055.007.112.01.169.01.054 0 .111-.004.167-.01.056-.007.111-.016.167-.027.053-.012.107-.025.159-.043.05-.017.098-.036.145-.059.048-.022.093-.047.137-.075.045-.03.091-.062.136-.098.042-.034.081-.071.117-.111.036-.039.068-.08.098-.124.03-.043.056-.088.08-.135.025-.047.046-.095.066-.145.021-.051.038-.102.056-.154.016-.052.032-.105.046-.16.015-.062.028-.126.035-.192.007-.077.011-.153.014-.23.008-.19.011-.383 0-.574a2.388 2.388 0 00-.279-.962 3.539 3.539 0 00-.832-.96 11.522 11.522 0 01-1.479-1.525 5.4 5.4 0 01-1.098-2.055 3.535 3.535 0 01-.204-.95 3.812 3.812 0 01-.03-.597c.002-.057.004-.114.007-.171v-.002c.008-.223.041-.453.096-.672.071-.281.176-.561.295-.836.064-.137.137-.271.207-.405.035-.065.069-.134.107-.2.006-.012.011-.021.018-.034l-.003-.003c-.016-.006-.028-.014-.041-.024-.031-.023-.077-.042-.106-.073-.025-.027-.059-.042-.084-.06a.712.712 0 01-.088-.069.953.953 0 01-.213-.335 1.807 1.807 0 01-.15-.706l-.004.024a.086.086 0 01-.004.021v-.105c0 .02.006.04.006.06.008-.265.061-.465.166-.724.108-.201.248-.398.438-.533.188-.136.371-.198.584-.198z"/>
+  </svg>
+)
+
+export function DownloadButton() {
+  const { t } = useTranslation()
+  const { platform, displayName } = usePlatform()
+  const { release, loading } = useGitHubReleases()
+
+  // Fonction pour obtenir l'URL de téléchargement selon la plateforme
+  const getDownloadUrl = () => {
+    if (!release) return 'https://github.com/simcmoi/blinkdo/releases/latest'
+
+    switch (platform) {
+      case 'macOS':
+        // Préférer ARM64 pour les nouveaux Macs
+        return release.macOS.arm64 || release.macOS.intel || 'https://github.com/simcmoi/blinkdo/releases/latest'
+      case 'Windows':
+        return release.windows.exe || release.windows.msi || 'https://github.com/simcmoi/blinkdo/releases/latest'
+      case 'Linux':
+        return release.linux.appimage || release.linux.deb || 'https://github.com/simcmoi/blinkdo/releases/latest'
+      default:
+        return 'https://github.com/simcmoi/blinkdo/releases/latest'
+    }
+  }
+
+  // Icône selon la plateforme
+  const PlatformIcon = () => {
+    switch (platform) {
+      case 'macOS':
+        return <AppleLogo />
+      case 'Windows':
+        return <WindowsLogo />
+      case 'Linux':
+        return <LinuxLogo />
+      default:
+        return <Download className="w-5 h-5" />
+    }
+  }
+
+  const buttonText = platform !== 'unknown' 
+    ? t('hero.downloadFor', { platform: displayName })
+    : t('hero.download')
+
+  return (
+    <Button 
+      size="lg" 
+      className="group bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] shadow-lg shadow-[#97acc8]/30 hover:shadow-xl hover:shadow-[#97acc8]/40 text-lg px-8 py-6 relative overflow-hidden transition-all duration-300"
+      asChild
+      disabled={loading}
+    >
+      <a href={getDownloadUrl()} target="_blank" rel="noopener noreferrer">
+        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+        <span className="relative z-10 flex items-center gap-2">
+          <motion.span
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.2 }}
+          >
+            <PlatformIcon />
+          </motion.span>
+          {buttonText}
+        </span>
+      </a>
+    </Button>
+  )
+}
