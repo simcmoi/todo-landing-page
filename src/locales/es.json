@@ -14,7 +14,21 @@
     "ctaSubtext": "Open Source • 100% Privado • Cero Suscripción",
     "badge": "Open Source (GPL-3.0) • Datos 100% Locales",
     "download": "Descargar",
-    "downloadFor": "Descargar para {{platform}}"
+    "downloadFor": "Descargar para {{platform}}",
+    "scrollToDiscover": "Descubre la aplicación"
+  },
+  "freeTrial": {
+    "title": "Prueba BlinkDo gratis",
+    "description": "Ingresa tu email para recibir el enlace de descarga",
+    "emailPlaceholder": "tu@email.com",
+    "getDownloadLink": "Obtener enlace de descarga",
+    "sending": "Enviando...",
+    "checkEmail": "¡Revisa tu email!",
+    "downloadStarting": "La descarga debería comenzar automáticamente",
+    "notStarting": "¿La descarga no comienza?",
+    "clickHere": "Haz clic aquí para descargar",
+    "or": "o",
+    "githubReleases": "Descargar desde GitHub Releases"
   },
   "socialProof": {
     "badge": "10,000+ usuarios satisfechos",
@@ -169,6 +183,8 @@
   "pricing": {
     "title": "Paga una vez. Úsalo para siempre.",
     "subtitle": "Sin suscripción, sin trucos. Compra una vez, es tuyo para siempre. O compila el código fuente gratis.",
+    "buyOnce": "COMPRA UNA VEZ, TUYO PARA SIEMPRE",
+    "buyOnceSubtitle": "Sin suscripciones, sin tarifas recurrentes. Paga una vez, usa para siempre.",
     "solo": {
       "name": "Solo",
       "description": "Perfecto para uso personal en un solo dispositivo",
@@ -224,6 +240,28 @@
         "Contribuye al proyecto"
       ]
     },
+    "team": {
+      "name": "Team",
+      "description": "Perfecto para equipos en crecimiento",
+      "price": "$159",
+      "priceLabel": "pago único",
+      "cta": "Comprar Team",
+      "popular": false,
+      "features": [
+        "Hasta 10 dispositivos macOS",
+        "Compra única, acceso de por vida",
+        "Todas las funciones incluidas",
+        "Actualizaciones de por vida",
+        "Actualizaciones automáticas",
+        "App firmada y certificada",
+        "Soporte prioritario",
+        "Datos 100% locales (sin nube)",
+        "Open Source (GPL-3.0)",
+        "Garantía de devolución de 14 días"
+      ]
+    },
+    "personal": "Personal",
+    "teamMode": "Equipo",
     "trial": "Prueba gratis de 14 días disponible para todos los planes de pago",
     "moneyBack": "Garantía de devolución de dinero de 30 días",
     "faq": "¿Preguntas? Consulta el FAQ o contáctanos"
@@ -308,6 +346,10 @@
       {
         "q": "¿Hay una app móvil?",
         "a": "Aún no, ¡pero está en nuestros planes! Por ahora, BlinkDo se enfoca en la experiencia de escritorio donde la velocidad de acceso por atajo de teclado marca toda la diferencia."
+      },
+      {
+        "q": "¿Ofrecen descuentos para estudiantes?",
+        "a": "¡Sí! Ofrecemos descuentos especiales para estudiantes. Por favor contáctanos a hello@blinkdo.app con tu identificación de estudiante para más información."
       }
     ],
     "stillQuestions": "¿Todavía tienes preguntas?",

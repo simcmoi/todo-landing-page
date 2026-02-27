@@ -9,10 +9,10 @@ import {
 
 export function Screenshots() {
   return (
-    <section className="relative py-24 bg-background overflow-hidden">
+    <section id="screenshots" className="relative py-24 bg-background overflow-hidden">
       {/* Decorative background */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-[#97acc8]/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-0 w-96 h-96 bg-[#ffdd00]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-[#ff4D00]/5 rounded-full blur-3xl" />
       
       <div className="container px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-[1fr,1.5fr,1fr] gap-12 items-center max-w-7xl mx-auto">
@@ -31,7 +31,7 @@ export function Screenshots() {
               <div className="flex items-center gap-2 px-3 py-2.5 bg-muted/50 border-b border-border">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-orange-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
                 </div>
               </div>
@@ -42,7 +42,7 @@ export function Screenshots() {
                   {/* Mock interface */}
                   <div className="bg-card/60 backdrop-blur rounded-lg border border-[#97acc8]/20 p-4 flex-1">
                     <div className="space-y-3">
-                      <div className="h-3 bg-[#ffdd00]/30 rounded w-24 mb-4"></div>
+                      <div className="h-3 bg-[#ff4D00]/30 rounded w-24 mb-4"></div>
                       {[1, 2, 3, 4, 5, 6].map((i) => (
                         <div key={i} className="flex items-center gap-2 p-2 hover:bg-muted/30 rounded">
                           <div className="w-4 h-4 rounded border-2 border-[#97acc8]"></div>
@@ -93,8 +93,8 @@ export function Screenshots() {
 
             {/* Feature 2 */}
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#ffdd00]/10 flex items-center justify-center border border-[#ffdd00]/20">
-                <Tag className="w-6 h-6 text-[#ffdd00]" />
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#ff4D00]/10 flex items-center justify-center border border-[#ff4D00]/20">
+                <Tag className="w-6 h-6 text-[#ff4D00]" />
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-lg mb-2">Organisation simplifiée</h3>
@@ -102,7 +102,7 @@ export function Screenshots() {
                   Multi-listes, tags colorés, drag & drop. Tout pour rester organisé sans complexité.
                 </p>
               </div>
-              <ArrowRight className="hidden lg:block w-6 h-6 text-[#ffdd00]/40 flex-shrink-0" />
+              <ArrowRight className="hidden lg:block w-6 h-6 text-[#ff4D00]/40 flex-shrink-0" />
             </div>
 
             {/* Feature 3 */}
@@ -135,13 +135,13 @@ export function Screenshots() {
             transition={{ duration: 0.7 }}
             className="relative group hidden lg:block"
           >
-            <div className="absolute -inset-1 bg-gradient-to-br from-[#ffdd00] to-[#f5cc00] rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-500"></div>
-            <div className="relative rounded-2xl border-2 border-[#ffdd00]/30 bg-card shadow-2xl overflow-hidden">
+            <div className="absolute -inset-1 bg-gradient-to-br from-[#ff4D00] to-[#ff6b00] rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-500"></div>
+            <div className="relative rounded-2xl border-2 border-[#ff4D00]/30 bg-card shadow-2xl overflow-hidden">
               {/* macOS controls */}
               <div className="flex items-center gap-2 px-3 py-2.5 bg-muted/50 border-b border-border">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                  <div className="w-3 h-3 rounded-full bg-orange-500/80"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
                 </div>
               </div>
@@ -150,16 +150,16 @@ export function Screenshots() {
               <div className="aspect-[9/16] bg-gradient-to-br from-background via-muted/20 to-background flex items-center justify-center p-6">
                 <div className="w-full h-full flex flex-col gap-3">
                   {/* Mock interface - version avec tags */}
-                  <div className="bg-card/60 backdrop-blur rounded-lg border border-[#ffdd00]/20 p-4 flex-1">
+                  <div className="bg-card/60 backdrop-blur rounded-lg border border-[#ff4D00]/20 p-4 flex-1">
                     <div className="space-y-3">
                       <div className="flex gap-2 mb-4">
                         <div className="h-2.5 bg-[#97acc8]/40 rounded-full w-16"></div>
-                        <div className="h-2.5 bg-[#ffdd00]/40 rounded-full w-20"></div>
+                        <div className="h-2.5 bg-[#ff4D00]/40 rounded-full w-20"></div>
                       </div>
                       {[1, 2, 3, 4, 5, 6].map((i) => (
                         <div key={i} className="space-y-1.5 p-2 hover:bg-muted/30 rounded">
                           <div className="flex items-center gap-2">
-                            <div className="w-4 h-4 rounded border-2 border-[#ffdd00]"></div>
+                            <div className="w-4 h-4 rounded border-2 border-[#ff4D00]"></div>
                             <div className={`h-2 bg-foreground/15 rounded ${i % 2 === 0 ? 'w-2/3' : 'w-3/4'}`}></div>
                           </div>
                           {i % 3 === 0 && (

@@ -34,6 +34,16 @@ export function Testimonials() {
     rating: 5
   }));
 
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    setDirection(-1);
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   // Auto-rotation toutes les 5 secondes
   useEffect(() => {
     if (isPaused) return;
@@ -44,16 +54,6 @@ export function Testimonials() {
 
     return () => clearInterval(interval);
   }, [currentIndex, isPaused]);
-
-  const handleNext = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const handlePrev = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   const variants = {
     enter: (direction: number) => ({
@@ -87,8 +87,8 @@ export function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ffdd00] bg-opacity-20 rounded-full border border-[#ffdd00] mb-6">
-            <Star className="w-4 h-4 text-[#ffdd00]" fill="currentColor" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff4D00] bg-opacity-20 rounded-full border border-[#ff4D00] mb-6">
+            <Star className="w-4 h-4 text-[#ff4D00]" fill="currentColor" />
             <span className="text-sm font-semibold text-gray-900">
               {t('testimonials.badge')}
             </span>
@@ -167,7 +167,7 @@ export function Testimonials() {
                   }}
                   className={`h-2 rounded-full transition-all ${
                     index === currentIndex 
-                      ? 'w-8 bg-[#ffdd00]' 
+                      ? 'w-8 bg-[#ff4D00]' 
                       : 'w-2 bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Aller au témoignage ${index + 1}`}
@@ -201,7 +201,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
     <>
       {/* Quote icon */}
       <div className="mb-4">
-        <Quote className="w-10 h-10 text-[#ffdd00] opacity-50" fill="currentColor" />
+        <Quote className="w-10 h-10 text-[#ff4D00] opacity-50" fill="currentColor" />
       </div>
 
       {/* Content */}
@@ -212,13 +212,13 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       {/* Rating */}
       <div className="flex gap-1 mb-4">
         {[...Array(testimonial.rating)].map((_, i) => (
-          <Star key={i} className="w-4 h-4 text-[#ffdd00]" fill="currentColor" />
+          <Star key={i} className="w-4 h-4 text-[#ff4D00]" fill="currentColor" />
         ))}
       </div>
 
       {/* Author */}
       <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#97acc8] to-[#ffdd00] flex items-center justify-center text-white font-bold">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#97acc8] to-[#ff4D00] flex items-center justify-center text-white font-bold">
           {testimonial.avatar}
         </div>
         <div>

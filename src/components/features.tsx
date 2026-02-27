@@ -47,7 +47,7 @@ export function Features() {
   return (
     <section className="py-24 bg-gradient-to-b from-background via-[#97acc8]/5 to-background relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-40 left-0 w-72 h-72 bg-[#ffdd00]/10 rounded-full blur-3xl" />
+      <div className="absolute top-40 left-0 w-72 h-72 bg-[#ff4D00]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-0 w-96 h-96 bg-[#97acc8]/10 rounded-full blur-3xl" />
       
       <div className="container px-4 md:px-6 relative z-10">
@@ -77,9 +77,9 @@ export function Features() {
             const Icon = feature.icon
             const colors = [
               { bg: 'bg-[#97acc8]/10', icon: 'text-[#97acc8]', border: 'border-[#97acc8]/20', hover: 'hover:shadow-[#97acc8]/20' },
-              { bg: 'bg-[#ffdd00]/10', icon: 'text-[#ffdd00]', border: 'border-[#ffdd00]/20', hover: 'hover:shadow-[#ffdd00]/20' },
+              { bg: 'bg-[#ff4D00]/10', icon: 'text-[#ff4D00]', border: 'border-[#ff4D00]/20', hover: 'hover:shadow-[#ff4D00]/20' },
               { bg: 'bg-[#97acc8]/15', icon: 'text-[#7a92ad]', border: 'border-[#97acc8]/30', hover: 'hover:shadow-[#97acc8]/30' },
-              { bg: 'bg-[#ffdd00]/15', icon: 'text-[#f5cc00]', border: 'border-[#ffdd00]/30', hover: 'hover:shadow-[#ffdd00]/30' },
+              { bg: 'bg-[#ff4D00]/15', icon: 'text-[#ff6b00]', border: 'border-[#ff4D00]/30', hover: 'hover:shadow-[#ff4D00]/30' },
             ]
             const color = colors[index % 4]
             
@@ -95,7 +95,7 @@ export function Features() {
                       <Icon className={`h-6 w-6 ${color.icon}`} />
                     </div>
                     {feature.badge && (
-                      <Badge variant={feature.badge.variant} className="bg-[#ffdd00] text-black border-[#ffdd00]/30">
+                      <Badge variant={feature.badge.variant} className="bg-[#ff4D00] text-black border-[#ff4D00]/30">
                         {feature.badge.text}
                       </Badge>
                     )}

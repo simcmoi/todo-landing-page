@@ -7,7 +7,7 @@ export function HowItWorks() {
   const { t } = useTranslation()
   
   const stepIcons = [Download, Zap, CheckCircle2]
-  const stepColors = ["#97acc8", "#ffdd00", "#97acc8"]
+  const stepColors = ["#97acc8", "#ff4D00", "#97acc8"]
   
   const steps = Array.from({ length: 3 }, (_, i) => ({
     number: t(`howItWorks.steps.${i}.number`),
@@ -55,7 +55,7 @@ export function HowItWorks() {
               <div 
                 className={`relative bg-white rounded-2xl p-8 border-2 transition-all hover:shadow-xl ${
                   step.highlight 
-                    ? 'border-[#ffdd00] shadow-lg shadow-[#ffdd00]/20' 
+                    ? 'border-[#ff4D00] shadow-lg shadow-[#ff4D00]/20' 
                     : 'border-gray-200 hover:border-[#97acc8]'
                 }`}
               >
@@ -67,7 +67,7 @@ export function HowItWorks() {
                 {/* Icon */}
                 <div 
                   className={`w-16 h-16 rounded-xl flex items-center justify-center mb-6 ${
-                    step.highlight ? 'bg-[#ffdd00]' : 'bg-[#97acc8]'
+                    step.highlight ? 'bg-[#ff4D00]' : 'bg-[#97acc8]'
                   } bg-opacity-20`}
                 >
                   <step.icon 
@@ -87,8 +87,8 @@ export function HowItWorks() {
 
                 {/* Highlight indicator */}
                 {step.highlight && step.badge && (
-                  <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-[#ffdd00] bg-opacity-20 rounded-full border border-[#ffdd00]">
-                    <Zap className="w-4 h-4 text-[#ffdd00]" fill="currentColor" />
+                  <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-[#ff4D00] bg-opacity-20 rounded-full border border-[#ff4D00]">
+                    <Zap className="w-4 h-4 text-[#ff4D00]" fill="currentColor" />
                     <span className="text-sm font-semibold text-gray-900">
                       {step.badge}
                     </span>
@@ -114,7 +114,7 @@ export function HowItWorks() {
             href={getTrialLink()} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-[#ffdd00] text-gray-900 rounded-lg font-semibold text-lg hover:bg-[#ffdd00]/90 transition-all hover:scale-105 shadow-lg shadow-[#ffdd00]/30 inline-block"
+            className="px-8 py-4 bg-[#ff4D00] text-gray-900 rounded-lg font-semibold text-lg hover:bg-[#ff4D00]/90 transition-all hover:scale-105 shadow-lg shadow-[#ff4D00]/30 inline-block"
           >
             {t("howItWorks.cta")}
           </a>

@@ -12,7 +12,7 @@ export function FAQ() {
   const { t } = useTranslation();
 
   // Build FAQs from translations
-  const faqs = Array.from({ length: 10 }).map((_, index) => ({
+  const faqs = Array.from({ length: 15 }).map((_, index) => ({
     question: t(`faq.questions.${index}.q`),
     answer: t(`faq.questions.${index}.a`)
   }));
@@ -65,7 +65,7 @@ export function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center bg-gradient-to-br from-[#97acc8]/10 to-[#ffdd00]/10 rounded-2xl p-8 border border-gray-200"
+          className="mt-16 text-center bg-gradient-to-br from-[#97acc8]/10 to-[#ff4D00]/10 rounded-2xl p-8 border border-gray-200"
         >
           <h3 className="text-2xl font-bold mb-3">{t('faq.stillQuestions')}</h3>
           <p className="text-gray-600 mb-6">
@@ -82,7 +82,7 @@ export function FAQ() {
             </a>
             <a 
               href={config.social.email}
-              className="px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold border-2 border-gray-200 hover:border-[#ffdd00] transition-all"
+              className="px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold border-2 border-gray-200 hover:border-[#ff4D00] transition-all"
             >
               {t('faq.email')}
             </a>

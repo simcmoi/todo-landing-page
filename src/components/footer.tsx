@@ -19,8 +19,8 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ffdd00] bg-opacity-20 rounded-full border border-[#ffdd00] mb-6">
-              <Zap className="w-4 h-4 text-[#ffdd00]" fill="currentColor" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#ff4D00] bg-opacity-20 rounded-full border border-[#ff4D00] mb-6">
+              <Zap className="w-4 h-4 text-[#ff4D00]" fill="currentColor" />
               <span className="text-sm font-semibold text-gray-900">
                 {t('footer.ctaBadge')}
               </span>
@@ -39,7 +39,7 @@ export function Footer() {
                 href={getTrialLink()} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-[#ffdd00] text-gray-900 rounded-lg font-semibold text-lg hover:bg-[#ffdd00]/90 transition-all hover:scale-105 shadow-lg shadow-[#ffdd00]/30"
+                className="px-8 py-4 bg-[#ff4D00] text-gray-900 rounded-lg font-semibold text-lg hover:bg-[#ff4D00]/90 transition-all hover:scale-105 shadow-lg shadow-[#ff4D00]/30"
               >
                 {t('footer.downloadButton')}
               </a>

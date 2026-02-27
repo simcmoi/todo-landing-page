@@ -1,7 +1,6 @@
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { getPurchaseLink } from "@/config"
+import { ChevronDown } from "lucide-react"
 import { useTranslation } from "react-i18next"
 import { DownloadButton } from "@/components/download-button"
 import { GridPattern } from "@/components/ui/grid-pattern"
@@ -12,6 +11,14 @@ export function Hero() {
   // Séparer le titre en mots pour l'animation
   const title = t("hero.title")
   const words = title.split(" ")
+  
+  // Fonction pour scroller vers la section suivante
+  const scrollToNextSection = () => {
+    const screenshotsSection = document.getElementById('screenshots')
+    if (screenshotsSection) {
+      screenshotsSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -40,10 +47,35 @@ export function Hero() {
         ]}
       />
       
-      {/* Gradient background with #ffdd00 and #97acc8 accents */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#97acc8]/5 via-background to-[#ffdd00]/5" />
-      <div className="absolute top-20 right-10 w-96 h-96 bg-[#ffdd00]/10 rounded-full blur-3xl" />
+      {/* Gradient background with #ff4D00 and #97acc8 accents */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#97acc8]/5 via-background to-[#ff4D00]/5" />
+      <div className="absolute top-20 right-10 w-96 h-96 bg-[#ff4D00]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#97acc8]/10 rounded-full blur-3xl" />
+      
+      {/* Flèche de scroll animée - positionnée en bas de la section hero, AVANT le container */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: words.length * 0.05 + 0.7, ease: "easeOut" }}
+        onClick={scrollToNextSection}
+        className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2 z-20 cursor-pointer hover:opacity-80 transition-opacity"
+      >
+        <p className="text-sm text-muted-foreground font-medium text-center whitespace-nowrap m-0 p-0">
+          {t("hero.scrollToDiscover")}
+        </p>
+        <motion.div
+          animate={{ 
+            y: [0, 8, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          <ChevronDown className="h-6 w-6 text-[#97acc8]" strokeWidth={2.5} />
+        </motion.div>
+      </motion.div>
       
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center space-y-8 text-center">
@@ -87,17 +119,6 @@ export function Hero() {
             className="flex flex-col gap-4 sm:flex-row items-center"
           >
             <DownloadButton />
-            <Button 
-              size="lg"
-              variant="outline"
-              className="group text-lg px-8 py-6 border-[#ffdd00] hover:bg-[#ffdd00]/10 relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#ffdd00]/20"
-              asChild
-            >
-              <a href={getPurchaseLink()} target="_blank" rel="noopener noreferrer">
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#ffdd00]/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
-                <span className="relative z-10">{t("hero.ctaSecondary")}</span>
-              </a>
-            </Button>
           </motion.div>
           
           {/* Badge Open Source - Apparaît EN DERNIER avec blur */}

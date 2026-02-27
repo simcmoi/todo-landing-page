@@ -83,13 +83,13 @@ export function ProblemSolution() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white rounded-2xl p-8 border-2 border-[#ffdd00] shadow-lg shadow-[#ffdd00]/20 relative overflow-hidden"
+            className="bg-white rounded-2xl p-8 border-2 border-[#ff4D00] shadow-lg shadow-[#ff4D00]/20 relative overflow-hidden"
           >
             {/* Decorative blob */}
-            <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#ffdd00] rounded-full opacity-10 blur-3xl" />
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#ff4D00] rounded-full opacity-10 blur-3xl" />
             
             <div className="flex items-center gap-3 mb-6 relative">
-              <div className="w-12 h-12 rounded-full bg-[#ffdd00] flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-[#ff4D00] flex items-center justify-center">
                 <Check className="w-6 h-6 text-gray-900" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">{t("problemSolution.with")}</h3>
@@ -105,13 +105,13 @@ export function ProblemSolution() {
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <Check className="w-5 h-5 text-[#ffdd00] mt-0.5 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-[#ff4D00] mt-0.5 flex-shrink-0" />
                   <span className="text-gray-700 font-medium">{solution}</span>
                 </motion.li>
               ))}
             </ul>
 
-            <div className="mt-8 p-4 bg-[#ffdd00] bg-opacity-20 rounded-lg border border-[#ffdd00] relative">
+            <div className="mt-8 p-4 bg-[#ff4D00] bg-opacity-20 rounded-lg border border-[#ff4D00] relative">
               <p className="text-sm text-gray-900 font-bold">
                 {t("problemSolution.withResult")}
               </p>
@@ -131,7 +131,7 @@ export function ProblemSolution() {
             href={getTrialLink()} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-[#ffdd00] text-gray-900 rounded-lg font-semibold text-lg hover:bg-[#ffdd00]/90 transition-all hover:scale-105 shadow-lg shadow-[#ffdd00]/30 inline-block"
+            className="px-8 py-4 bg-[#ff4D00] text-gray-900 rounded-lg font-semibold text-lg hover:bg-[#ff4D00]/90 transition-all hover:scale-105 shadow-lg shadow-[#ff4D00]/30 inline-block"
           >
             {t("problemSolution.cta")}
           </a>

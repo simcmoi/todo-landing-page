@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import { useTranslation } from "react-i18next"
 import { usePlatform } from "@/hooks/use-platform"
-import { useGitHubReleases } from "@/hooks/use-github-releases"
 
 // Icônes SVG pour les plateformes
 const AppleLogo = () => (
@@ -26,63 +25,42 @@ const LinuxLogo = () => (
 
 export function DownloadButton() {
   const { t } = useTranslation()
-  const { platform, displayName } = usePlatform()
-  const { release, loading } = useGitHubReleases()
+  const { platform } = usePlatform()
 
-  // Fonction pour obtenir l'URL de téléchargement selon la plateforme
-  const getDownloadUrl = () => {
-    if (!release) return 'https://github.com/simcmoi/blinkdo/releases/latest'
-
-    switch (platform) {
-      case 'macOS':
-        // Préférer ARM64 pour les nouveaux Macs
-        return release.macOS.arm64 || release.macOS.intel || 'https://github.com/simcmoi/blinkdo/releases/latest'
-      case 'Windows':
-        return release.windows.exe || release.windows.msi || 'https://github.com/simcmoi/blinkdo/releases/latest'
-      case 'Linux':
-        return release.linux.appimage || release.linux.deb || 'https://github.com/simcmoi/blinkdo/releases/latest'
-      default:
-        return 'https://github.com/simcmoi/blinkdo/releases/latest'
+  // Scroll vers la section Pricing
+  const handleScrollToPricing = (e: React.MouseEvent) => {
+    e.preventDefault()
+    const pricingSection = document.getElementById('pricing')
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
   }
 
-  // Icône selon la plateforme
-  const PlatformIcon = () => {
-    switch (platform) {
-      case 'macOS':
-        return <AppleLogo />
-      case 'Windows':
-        return <WindowsLogo />
-      case 'Linux':
-        return <LinuxLogo />
-      default:
-        return <Download className="w-5 h-5" />
-    }
+  // Map des icônes par plateforme
+  const platformIcons: Record<string, React.ComponentType> = {
+    'macOS': AppleLogo,
+    'Windows': WindowsLogo,
+    'Linux': LinuxLogo,
   }
 
-  const buttonText = platform !== 'unknown' 
-    ? t('hero.downloadFor', { platform: displayName })
-    : t('hero.download')
+  const IconComponent = platformIcons[platform] || (() => <Download className="w-5 h-5" />)
 
   return (
     <Button 
       size="lg" 
       className="group bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] shadow-lg shadow-[#97acc8]/30 hover:shadow-xl hover:shadow-[#97acc8]/40 text-lg px-8 py-6 relative overflow-hidden transition-all duration-300"
-      asChild
-      disabled={loading}
+      onClick={handleScrollToPricing}
     >
-      <a href={getDownloadUrl()} target="_blank" rel="noopener noreferrer">
-        <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
-        <span className="relative z-10 flex items-center gap-2">
-          <motion.span
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.2 }}
-          >
-            <PlatformIcon />
-          </motion.span>
-          {buttonText}
-        </span>
-      </a>
+      <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+      <span className="relative z-10 flex items-center gap-2">
+        <motion.span
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.2 }}
+        >
+          <IconComponent />
+        </motion.span>
+        {t('hero.download')}
+      </span>
     </Button>
   )
 }

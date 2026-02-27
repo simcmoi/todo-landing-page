@@ -1,14 +1,25 @@
 import { useState } from "react"
-import { motion } from "framer-motion"
-import { Menu, X, Globe } from "lucide-react"
+import { Menu, X, Globe, Github, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { config, getTrialLink } from "@/config"
+import { config } from "@/config"
 import { useTranslation } from "react-i18next"
+import { useGitHubStars } from "@/hooks/use-github-stars"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [langMenuOpen, setLangMenuOpen] = useState(false)
   const { t, i18n } = useTranslation()
+  const { stars, loading } = useGitHubStars(config.social.github)
+
+  // Fonction pour scroller vers Pricing
+  const handleScrollToPricing = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setIsOpen(false)
+    const pricingSection = document.getElementById('pricing')
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
 
   const navItems = [
     { label: t("nav.features"), href: "#features" },
@@ -29,9 +40,6 @@ export function Header() {
   const changeLanguage = (langCode: string) => {
     i18n.changeLanguage(langCode)
     setLangMenuOpen(false)
-    // Update HTML dir attribute for RTL support
-    document.documentElement.dir = langCode === 'ar' ? 'rtl' : 'ltr'
-    document.documentElement.lang = langCode
   }
 
   return (
@@ -40,12 +48,7 @@ export function Header() {
         <div className="px-4 md:px-6">
           <div className="flex items-center justify-between h-16">
             {/* Logo avec icône SVG */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center gap-3"
-            >
+            <div className="flex items-center gap-3">
               <a href="/" className="flex items-center gap-3">
                 {/* Icône SVG temporaire */}
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,21 +57,16 @@ export function Header() {
                   <defs>
                     <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
                       <stop stopColor="#97acc8" />
-                      <stop offset="1" stopColor="#ffdd00" />
+                      <stop offset="1" stopColor="#ff4D00" />
                     </linearGradient>
                   </defs>
                 </svg>
                 <span className="text-xl font-bold">BlinkDo</span>
               </a>
-            </motion.div>
+            </div>
 
             {/* Desktop Navigation */}
-            <motion.nav
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="hidden md:flex items-center gap-8"
-            >
+            <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -78,15 +76,10 @@ export function Header() {
                   {item.label}
                 </a>
               ))}
-            </motion.nav>
+            </nav>
 
             {/* CTA Buttons - Desktop */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="hidden md:flex items-center gap-3"
-            >
+            <div className="hidden md:flex items-center gap-3">
               {/* Language Selector */}
               <div className="relative">
                 <Button 
@@ -115,22 +108,31 @@ export function Header() {
                   </div>
                 )}
               </div>
-              <Button variant="ghost" size="sm" asChild>
-                <a href={config.social.github} target="_blank" rel="noopener noreferrer">
-                  {t("nav.github")}
+
+              {/* GitHub Stars Badge */}
+              <Button 
+                variant="outline" 
+                size="sm" 
+                asChild
+                className="gap-2 hover:bg-muted"
+              >
+                <a href={config.social.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <Github className="h-4 w-4" />
+                  <Star className="h-3.5 w-3.5 fill-orange-400 text-orange-400" />
+                  <span className="font-semibold">
+                    {loading ? "..." : stars?.toLocaleString()}
+                  </span>
                 </a>
               </Button>
+
               <Button 
                 size="sm" 
-                className="group bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#97acc8]/20" 
-                asChild
+                className="bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0]" 
+                onClick={handleScrollToPricing}
               >
-                <a href={getTrialLink()} target="_blank" rel="noopener noreferrer">
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
-                  <span className="relative z-10">{t("hero.cta")}</span>
-                </a>
+                {t("nav.download")}
               </Button>
-            </motion.div>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -144,12 +146,7 @@ export function Header() {
 
           {/* Mobile Menu */}
           {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden pb-4 space-y-4 border-t border-border mt-2 pt-4"
-            >
+            <div className="md:hidden pb-4 space-y-4 border-t border-border mt-2 pt-4">
               {navItems.map((item) => (
                 <a
                   key={item.href}
@@ -179,23 +176,33 @@ export function Header() {
                     </button>
                   ))}
                 </div>
-                <Button variant="ghost" size="sm" asChild className="w-full justify-center">
-                  <a href={config.social.github} target="_blank" rel="noopener noreferrer">
-                    {t("nav.github")}
+
+                {/* GitHub Stars Badge Mobile */}
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  asChild
+                  className="w-full justify-center gap-2"
+                >
+                  <a href={config.social.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <Github className="h-4 w-4" />
+                    <Star className="h-3.5 w-3.5 fill-orange-400 text-orange-400" />
+                    <span className="font-semibold">
+                      {loading ? "..." : stars?.toLocaleString()}
+                    </span>
+                    <span className="text-muted-foreground text-xs">stars</span>
                   </a>
                 </Button>
+
                 <Button 
                   size="sm" 
-                  className="group bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] w-full relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-[#97acc8]/20" 
-                  asChild
+                  className="bg-gradient-to-r from-[#97acc8] to-[#7a92ad] hover:from-[#7a92ad] hover:to-[#6582a0] w-full" 
+                  onClick={handleScrollToPricing}
                 >
-                  <a href={getTrialLink()} target="_blank" rel="noopener noreferrer">
-                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
-                    <span className="relative z-10">{t("hero.cta")}</span>
-                  </a>
+                  {t("nav.download")}
                 </Button>
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </div>
