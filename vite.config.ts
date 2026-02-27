@@ -5,7 +5,6 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/todo-overlay/',
   server: {
     port: 5174,
     strictPort: true,
